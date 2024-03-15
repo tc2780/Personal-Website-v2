@@ -36,9 +36,9 @@ const StyledDesc = styled.div`
 const WelcomeBox: React.FC<{}> = () => {
     return (
         <StyledBox >
-            <StyledTitle> hello </StyledTitle>
-            <StyledIntro> <p>I'm Tracy</p> </StyledIntro>
-            <StyledIntro> <p>and I'm an aspiring software developer</p> </StyledIntro>
+            <StyledTitle> {`hello`} </StyledTitle>
+            <StyledIntro> {`I'm Tracy`} </StyledIntro>
+            <StyledIntro> {`and I'm an aspiring software developer`} </StyledIntro>
             <StyledDesc></StyledDesc>
         </StyledBox>
     )

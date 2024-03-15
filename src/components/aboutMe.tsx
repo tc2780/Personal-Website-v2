@@ -27,8 +27,9 @@ const AboutMe: React.FC<{}> = () => {
         <StyledAbout >
             <StyledIntro>About me</StyledIntro>
             <SmallIntro>
-                <p>My name is Tracy and I'm a 4th year Computer Science student at the University of British Columbia.
-                </p>
+                {`
+                    My name is Tracy and I'm a 4th year Computer Science student at the University of British Columbia.
+                `}
             </SmallIntro>
             <EndIntro>About me</EndIntro>
         </StyledAbout>
