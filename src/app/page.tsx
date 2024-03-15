@@ -1,28 +1,38 @@
+'use client'
+import AboutMe from "@/components/aboutMe";
+import ContactMe from "@/components/contact";
+import CreativeWorks from "@/components/creativeWorks";
+import FeaturedProjects from "@/components/featuredProjects";
 import NavBar from "@/components/navBar";
+import ProjectArchive from "@/components/projectArchive";
 import WelcomeBox from "@/components/welcome";
-import Image from "next/image";
 
 export default function Home() {
   return (
+    <div style={{position: "relative"}}>
+      <NavBar />
+
       <div
         style={{
           backgroundImage: "url(/images/catHeader.png)",
           backgroundSize: "cover",
           height: '100vh',
-          // width: '100vh',
-          position: 'relative',
+          width: "100%",
         }}>
 
-        <NavBar></NavBar>
-        <WelcomeBox></WelcomeBox>
-
-        <div
-        style={{
-          height: '1000px'
-        }}>
-          PLACEHOLDER for content
-        </div>
+        <WelcomeBox />
         
       </div>
+      
+      <AboutMe />
+  
+      <FeaturedProjects />
+
+      <ProjectArchive />
+
+      <CreativeWorks />
+
+      <ContactMe />
+    </div>
   );
 }
