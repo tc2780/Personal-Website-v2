@@ -37,8 +37,8 @@ const WelcomeBox: React.FC<{}> = () => {
     return (
         <StyledBox >
             <StyledTitle> hello </StyledTitle>
-            <StyledIntro> I'm Tracy </StyledIntro>
-            <StyledIntro> and I'm an aspiring software developer </StyledIntro>
+            <StyledIntro> <p>I'm Tracy</p> </StyledIntro>
+            <StyledIntro> <p>and I'm an aspiring software developer</p> </StyledIntro>
             <StyledDesc></StyledDesc>
         </StyledBox>
     )
