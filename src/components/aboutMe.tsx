@@ -63,6 +63,8 @@ const AboutMe: React.FC<{}> = () => {
     return (
         <StyledAbout >
             <AboutTitle>about me</AboutTitle>
+            <br /><br />
+            <SubTitle>a small intro</SubTitle>
             <Paragraph>
                 {`
                     My name is Tracy and I'm a 4th year Computer Science student at the University of British Columbia.
@@ -87,6 +89,7 @@ const AboutMe: React.FC<{}> = () => {
                 <StyledTag bordered={false}>TypeScript</StyledTag>
                 <StyledTag bordered={false}>Java</StyledTag>
                 <StyledTag bordered={false}>JavaScript</StyledTag>
+                <StyledTag bordered={false}>Node.js</StyledTag>
                 <StyledTag bordered={false}>C++</StyledTag>
                 <StyledTag bordered={false}>HTML</StyledTag>
                 <StyledTag bordered={false}>CSS</StyledTag>
