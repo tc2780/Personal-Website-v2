@@ -9,7 +9,13 @@ import WelcomeBox from "@/components/welcome";
 
 export default function Home() {
   return (
-    <div style={{position: "relative"}}>
+    <div style={{
+      position: "relative", 
+      color: "white", 
+      backgroundColor: "black",
+      // fontFamily: "Verdana",
+      fontFamily: "Trebuchet MS",
+      }}>
       <NavBar />
 
       <div
@@ -23,7 +29,7 @@ export default function Home() {
         <WelcomeBox />
         
       </div>
-      
+
       <AboutMe />
   
       <FeaturedProjects />
