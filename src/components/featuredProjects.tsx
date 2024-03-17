@@ -200,8 +200,8 @@ const FeaturedProjects: React.FC<{}> = () => {
                                     hoverable
                                     cover={<img alt="Insight UBC" src="/images/InsightUBCSite.png" />}
                                     actions={[
-                                        <Tooltip title="Video Demo">
-                                            <a href="https://youtu.be/dd42775Kg0E" target="_blank" key = "link">
+                                        <Tooltip title="Video Demo" key = "link">
+                                            <a href="https://youtu.be/dd42775Kg0E" target="_blank">
                                                 <YoutubeOutlined style={{fontSize: "30px"}}/>
                                             </a>
                                         </Tooltip>
