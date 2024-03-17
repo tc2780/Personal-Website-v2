@@ -34,9 +34,9 @@ export default function Home() {
   
       <FeaturedProjects />
 
-      <ProjectArchive />
-
       <CreativeWorks />
+      
+      <ProjectArchive />
 
       <ContactMe />
     </div>

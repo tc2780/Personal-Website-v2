@@ -10,14 +10,25 @@ const SyledFeatured = styled.div`
     flex-direction: column;
     // min-width: 600px;
     // padding: 0 10% 0 30%;
-    margin-top: 50px;
+    margin-top: 100px;
+    margin: 100px 6% 0 20%;
     text-align: right;
     // width: 100%;
+
+    border-radius: 50px;
+
+    box-shadow: inset 18px 18px 14px -2px #1C0D44,
+                12px 8px 0 0px black;
+
+
+    color: #d3d3d3;
+    background-color: #2F1B5B;
 `;
 
 const FeaturedTitle = styled.div`
     font-size: 40px;
-    padding: 0 10% 0 30%;
+    padding: 50px 10% 0 30%;
+    color: ghostwhite;
     
 `;
 
@@ -29,33 +40,21 @@ const FeaturedDescription = styled.div`
 const Card = styled(AntdCard)`
     // background: darkgray;
     font-family: inherit;
-    // max-width: 500px;
-    // min-width: 500px;
-    // text-align: right;
-
-    // margin: 20px 3% 20px 6%;
-    // min-width: 500px;
-
-    // border: thick;
 
     
     
     border-width: 5px;
-    border-color: black;
+    border-color: #2F1B5B;
     border-radius: 50px;
-    // border-bottom-left-radius: 5%;
-    // border-bottom-right-radius: 5%;
 
     
-
-
     .cardTitle {
         text-align: left;
         font-size: 25px;
         font-weight: bold;
     }
     margin-bottom: 20px;
-    margin: 20px;
+    // margin: 20px;
     overflow: hidden;
 
 
@@ -81,8 +80,8 @@ const StyledTag = styled(Tag)`
 const Cards = styled.div`
     // align-self: flex-end;
     // display: inline-flex;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
 `;
 
 const FeaturedProjects: React.FC<{}> = () => {
@@ -91,7 +90,7 @@ const FeaturedProjects: React.FC<{}> = () => {
             <FeaturedTitle>featured projects</FeaturedTitle>
             <FeaturedDescription>These are a few of my highlighted projects</FeaturedDescription>
             <Cards>
-                <Row gutter={[24, 24]}>
+                <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 16]}>
                     <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                         <Card
                             hoverable

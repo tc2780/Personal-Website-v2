@@ -1,7 +1,8 @@
 'use client'
-import { Tag } from "antd";
+import { Col, Row, Tag } from "antd";
 import React from "react";
 import styled from 'styled-components';
+
 
 
 const StyledAbout = styled.div`
@@ -15,24 +16,41 @@ const StyledAbout = styled.div`
 
     align-items: left;
     flex-direction: column;
-    min-width: 600px;
-    padding: 0 30% 0 10%;
+    // min-width: 600px;
+    width: inherit;
+    // padding: 0 30% 0 10%;
+    margin: 0 26% 0 6%;
+    padding: 4% 4% 4% 4%;
     margin-top: 50px;
+
+    background-color: #2F1B5B;
+    border-radius: 50px;
+
+    // box-shadow: 60px -16px #1C0D44;
+    // box-shadow: 0px 0px 10px 20px white;
+    box-shadow: inset 18px 18px 14px -2px #1C0D44,
+                12px 8px 0 0px black;
+
+    // box-shadow: 14px 10px 0 0px black,
+    //             20px 12px 0 0px #1C0D44,
+    //             20px 16px 0 0px #1C0D44,
+    //             16px 16px 0 0px #1C0D44;
+
+    // text-shadow: 2px 2px 1px black;
+
+    color: #d3d3d3;
 
     
 `;
 
 const AboutTitle = styled.div`
     font-size: 40px;
-    // border-bottom-width: thick;
-    // border-bottom-color: darkgrey;
-    // border-bottom-style: ridge;
-    // border-bottom-left-radius: 5%;
-    // border-bottom-right-radius: 5%;
+    color: ghostwhite;
+    // font-family: inherit;
 `;
 const Paragraph = styled.div`
     font-size: 20px;
-    min-width: 600px;
+    // min-width: 600px;
     // padding: 0 10% 0 10%;
 
 `;
@@ -41,10 +59,11 @@ const SubTitle = styled.div`
     font-size: 25px;
     font-style: italic;
     margin-bottom: 10px;
+    color: ghostwhite;
 `;
 
 const Skills = styled.div`
-    min-width: 600px;
+    // min-width: 600px;
     // padding: 0 10% 0 10%;
     text-align: left;
 `;
@@ -62,6 +81,7 @@ const StyledTag = styled(Tag)`
 const AboutMe: React.FC<{}> = () => {
     return (
         <StyledAbout >
+            
             <AboutTitle>about me</AboutTitle>
             <br /><br />
             <SubTitle>a small intro</SubTitle>
