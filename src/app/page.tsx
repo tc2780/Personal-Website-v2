@@ -6,6 +6,21 @@ import FeaturedProjects from "@/components/featuredProjects";
 import NavBar from "@/components/navBar";
 import ProjectArchive from "@/components/projectArchive";
 import WelcomeBox from "@/components/welcome";
+import { keyframes } from "@emotion/react";
+import Reveal from "react-awesome-reveal";
+
+
+const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 150px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
 
 export default function Home() {
   return (
@@ -30,15 +45,18 @@ export default function Home() {
         
       </div>
 
-      <AboutMe />
-  
-      <FeaturedProjects />
 
-      <CreativeWorks />
-      
-      <ProjectArchive />
+      <Reveal keyframes={customAnimation}>
+        <AboutMe />
+    
+        <FeaturedProjects />
 
-      <ContactMe />
+        <CreativeWorks />
+
+        <ProjectArchive />
+
+        <ContactMe />
+      </Reveal>
     </div>
   );
 }

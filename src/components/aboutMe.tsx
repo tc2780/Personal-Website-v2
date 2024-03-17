@@ -1,8 +1,9 @@
 'use client'
 import { Col, Row, Tag } from "antd";
 import React from "react";
+import Reveal, { Fade } from "react-awesome-reveal";
 import styled from 'styled-components';
-
+import { keyframes } from "@emotion/react";
 
 
 const StyledAbout = styled.div`
@@ -77,11 +78,10 @@ const StyledTag = styled(Tag)`
     font-family: inherit;
 `;
 
-
 const AboutMe: React.FC<{}> = () => {
     return (
         <StyledAbout >
-            
+            <Fade fraction={0.1}cascade damping={0.05}>
             <AboutTitle>about me</AboutTitle>
             <br /><br />
             <SubTitle>a small intro</SubTitle>
@@ -110,11 +110,20 @@ const AboutMe: React.FC<{}> = () => {
                 <StyledTag bordered={false}>Java</StyledTag>
                 <StyledTag bordered={false}>JavaScript</StyledTag>
                 <StyledTag bordered={false}>Node.js</StyledTag>
+                <StyledTag bordered={false}>ThreeJS</StyledTag>
+                <StyledTag bordered={false}>OpenGL</StyledTag>
                 <StyledTag bordered={false}>C++</StyledTag>
+                <StyledTag bordered={false}>C</StyledTag>
                 <StyledTag bordered={false}>HTML</StyledTag>
                 <StyledTag bordered={false}>CSS</StyledTag>
+                {/* <StyledTag bordered={false}>Jest</StyledTag>
+                <StyledTag bordered={false}>Mocha</StyledTag>
+                <StyledTag bordered={false}>Chai</StyledTag>
+                <StyledTag bordered={false}>JUnit</StyledTag> */}
                 <StyledTag bordered={false}>SQL</StyledTag>
+                <StyledTag bordered={false}>PHP</StyledTag>
             </Skills>
+            </Fade>
         </StyledAbout>
     )
 }

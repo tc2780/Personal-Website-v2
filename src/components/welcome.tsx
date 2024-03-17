@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import styled from 'styled-components';
 
 const StyledBox = styled.div`
@@ -36,10 +37,12 @@ const StyledDesc = styled.div`
 const WelcomeBox: React.FC<{}> = () => {
     return (
         <StyledBox >
-            <StyledTitle> {`hello`} </StyledTitle>
-            <StyledIntro> {`I'm Tracy`} </StyledIntro>
-            <StyledIntro> {`and I'm an aspiring software developer`} </StyledIntro>
-            <StyledDesc></StyledDesc>
+            <Fade cascade damping={0.8} triggerOnce={true}>
+                <StyledTitle> {`hello`} </StyledTitle>
+                <StyledIntro> {`I'm Tracy`} </StyledIntro>
+                <StyledIntro> {`and I'm an aspiring software developer`} </StyledIntro>
+                <StyledDesc></StyledDesc>
+            </Fade>
         </StyledBox>
     )
 }

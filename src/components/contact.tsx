@@ -25,6 +25,7 @@ const StyledContact = styled.div`
 const ContactTitle = styled.div`
     font-size: 40px;
     color: ghostwhite;
+    height: 200px;
 `;
 
 const ContactMe: React.FC<{}> = () => {
