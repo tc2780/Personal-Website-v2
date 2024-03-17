@@ -27,7 +27,7 @@ export default function Home() {
     <div style={{
       position: "relative", 
       color: "white", 
-      backgroundColor: "black",
+      backgroundColor: "#04030e",
       // fontFamily: "Verdana",
       fontFamily: "Trebuchet MS",
       }}>
