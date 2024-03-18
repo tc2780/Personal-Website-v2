@@ -109,7 +109,7 @@ const AboutMe: React.FC<{}> = () => {
     return (
         <StyledAbout >
             <Fade fraction={0.1}cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
-            <AboutTitle>about me</AboutTitle>
+                <AboutTitle>about me</AboutTitle>
             </Fade>
             <br />
             <br />
