@@ -36,7 +36,7 @@ const StyledDesc = styled.div`
 
 const WelcomeBox: React.FC<{}> = () => {
     return (
-        <StyledBox >
+        <StyledBox id="homeSection">
             <Fade cascade damping={0.8} triggerOnce={true}>
                 <StyledTitle> {`hello`} </StyledTitle>
                 <StyledIntro> {`I'm Tracy`} </StyledIntro>

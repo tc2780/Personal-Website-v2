@@ -21,8 +21,8 @@ const StyledAbout = styled.div`
     width: inherit;
     // padding: 0 30% 0 10%;
     margin: 0 26% 0 6%;
-    padding: 4% 4% 4% 4%;
-    margin-top: 50px;
+    padding: 0% 4% 4% 4%;
+    // margin-top: 50px;
 
 
 
@@ -61,7 +61,8 @@ const AboutTitle = styled.div`
     box-shadow: 0px 0px 0px 20px #673da6,
                 10px 10px 0px 20px #542a93;
     border-radius: 3px;
-    transform: translate(-50px, 30px);
+    transform: translate(-50px, 0px);
+    // transform: translate(-50px, 30px);
     // transform: translate(-20px, 50px);
     
     
@@ -89,7 +90,7 @@ const Skills = styled.div`
 const StyledTag = styled(Tag)`
     font-size: 20px;
     color: white;
-    background-color: #421d64;
+    background-color: #904e94;
     padding: 5px 10px 5px 10px;
     margin-bottom: 10px;
     font-family: inherit;
@@ -103,11 +104,13 @@ const AboutContent = styled.div`
     box-shadow: 0px 0px 0px 30px #3e207f,
                 20px 20px 0px 30px #270965;
     border-radius: 3px;
+
+    transform: translate(0, -30px);
 `;
 
 const AboutMe: React.FC<{}> = () => {
     return (
-        <StyledAbout >
+        <StyledAbout id="aboutSection">
             <Fade fraction={0.1}cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
                 <AboutTitle>about me</AboutTitle>
             </Fade>

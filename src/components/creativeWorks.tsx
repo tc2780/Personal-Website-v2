@@ -1,4 +1,5 @@
 'use client'
+import { Col, Row } from "antd";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import styled from 'styled-components';
@@ -55,13 +56,24 @@ const CreativeContent = styled.div`
 
 const CreativeWorks: React.FC<{}> = () => {
     return (
-        <StyledCreativeWorks >
+        <StyledCreativeWorks id="creativeSection">
             <Fade fraction={0.1}cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
                 <CreativeTitle>creative works</CreativeTitle>
             </Fade>
             <br />
             <br />
-            <CreativeContent>TESTING</CreativeContent>
+            <CreativeContent>
+                <Row>
+                    <Col>
+                    </Col>
+                    <Col>
+                    </Col>
+                    <Col>
+                    </Col>
+                </Row>
+
+
+            </CreativeContent>
         </StyledCreativeWorks>
     )
 }

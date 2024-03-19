@@ -45,7 +45,7 @@ const ContactContent = styled.div`
 
 const ContactMe: React.FC<{}> = () => {
     return (
-        <StyledContact >
+        <StyledContact id="contactSection">
             <ContactTitle>contact me</ContactTitle>
             <ContactContent>TESTING</ContactContent>
         </StyledContact>

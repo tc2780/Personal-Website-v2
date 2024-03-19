@@ -1,14 +1,12 @@
 import { Fade } from "react-awesome-reveal";
-import { Card as AntdCard, Button, Carousel, Col, Row, Tag, Tooltip } from "antd";
+import { Card as AntdCard, Tag } from "antd";
 import styled from "styled-components";
-import { ReactElement } from "react";
 
 const StyledCard = styled(AntdCard)`
     // background: darkgray;
     font-family: inherit;
 
-    
-    
+
     border-width: 5px;
     border-color: #2F1B5B;
     border-radius: 50px;
@@ -40,13 +38,6 @@ const StyledTag = styled(Tag)`
     font-family: inherit;
     border-shadow: 0px 0px 2px black;
     margin-top: 10px
-`;
-
-const Cards = styled.div`
-    // align-self: flex-end;
-    // display: inline-flex;
-    padding-left: 4%;
-    padding-right: 4%;
 `;
 
 export interface CardProps {

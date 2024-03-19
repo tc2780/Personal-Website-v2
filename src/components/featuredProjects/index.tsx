@@ -1,6 +1,6 @@
 'use client'
 import { GithubOutlined, YoutubeOutlined } from "@ant-design/icons";
-import { Card as AntdCard, Button, Carousel, Col, Row, Tag, Tooltip } from "antd";
+import { Carousel, Col, Row, Tooltip } from "antd";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import styled from 'styled-components';
@@ -25,6 +25,8 @@ const SyledFeatured = styled.div`
 
     color: #d3d3d3;
     // background-color: #2F1B5B;
+
+    // transform: translate(0, 100px);
 `;
 
 const FeaturedTitle = styled.div`
@@ -54,46 +56,6 @@ const FeaturedDescription = styled.div`
     color: ghostwhite;
 `;
 
-const CardTemp = styled(AntdCard)`
-    // background: darkgray;
-    font-family: inherit;
-
-    
-    
-    border-width: 5px;
-    border-color: #2F1B5B;
-    border-radius: 50px;
-
-    
-    .cardTitle {
-        text-align: left;
-        font-size: 25px;
-        font-weight: bold;
-    }
-    margin-bottom: 20px;
-    // margin: 20px;
-    overflow: hidden;
-
-
-`;
-
-
-const CardDescription = styled.div`
-    font-size: 16px;
-    text-align: left;
-`;
-
-const StyledTag = styled(Tag)`
-    font-size: 16px;
-    color: white;
-    text-shadow: 0px 0px 3px black;
-    background-color: #c1bfdf;
-    padding: 5px 10px 5px 10px;
-    font-family: inherit;
-    border-shadow: 0px 0px 2px black;
-    margin-top: 10px
-`;
-
 const Cards = styled.div`
     // align-self: flex-end;
     // display: inline-flex;
@@ -114,7 +76,7 @@ const FeaturedContent = styled.div`
 
 const FeaturedProjects: React.FC<{}> = () => {
     return (
-        <SyledFeatured >
+        <SyledFeatured id="featuredSection">
             <Fade fraction={0.1}cascade damping={0.05} style={{alignSelf:"flex-start"}}>
                 <FeaturedTitle>featured projects</FeaturedTitle>
                 
@@ -127,7 +89,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                     <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 16]}>
                     <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
-                                title = {"Hrmonic Hustle (ongoing)"}
+                                title = {"Harmonic Hustle (ongoing)"}
                                 cover={
                                     <Carousel infinite={false}>
                                         <div>
