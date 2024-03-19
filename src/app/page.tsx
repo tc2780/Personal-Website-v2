@@ -51,6 +51,7 @@ export default function Home() {
 
 
       <Reveal keyframes={customAnimation}>
+        <div style={{minHeight: "120px"}}/>
         <AboutMe />
     
         <FeaturedProjects />

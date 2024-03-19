@@ -41,16 +41,16 @@ const NavBar: React.FC<{}> = () => {
     const vh = window.innerHeight;
     // useEffect(() => {
         const listenScrollEvent = (event: any) => {
-            console.log("scroll: " + document.documentElement.scrollTop + "\n");
-            console.log("vh: " + vh + "\n");
-            if (document.documentElement.scrollTop > (vh - 100)) {
+            // console.log("scroll: " + document.documentElement.scrollTop + "\n");
+            // console.log("vh: " + vh + "\n");
+            if (document.documentElement.scrollTop > (vh)) {
                 setAtTop(false);
-                console.log("SET FALSE");
+                // console.log("SET FALSE");
             } else {
                 setAtTop(true);
-                console.log("SET TRUE");
+                // console.log("SET TRUE");
             }
-            console.log(atTop);
+            // console.log(atTop);
         }
 
         // useEffect(() => {
