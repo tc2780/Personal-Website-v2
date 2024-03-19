@@ -7,8 +7,11 @@ import NavBar from "@/components/navBar";
 import ProjectArchive from "@/components/projectArchive";
 import WelcomeBox from "@/components/welcome";
 import { keyframes } from "@emotion/react";
+import dynamic from "next/dynamic";
 import Reveal from "react-awesome-reveal";
 
+
+const DynamicNavBar = dynamic(() => import('@/components/navBar'),   { ssr: false })
 
 const customAnimation = keyframes`
   from {
@@ -31,7 +34,8 @@ export default function Home() {
       // fontFamily: "Verdana",
       fontFamily: "Trebuchet MS",
       }}>
-      <NavBar />
+      {/* <NavBar /> */}
+      <DynamicNavBar />
 
       <div
         style={{
