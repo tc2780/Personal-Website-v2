@@ -1,8 +1,10 @@
 'use client'
-import { Col, Row } from "antd";
+import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Card, Carousel, Col, Image, Row } from "antd";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import styled from 'styled-components';
+import YouTube from 'react-youtube';
 
 
 const StyledCreativeWorks = styled.div`
@@ -24,6 +26,17 @@ const StyledCreativeWorks = styled.div`
     color: #d3d3d3;
 
     position: relative;
+    // height: fit-content;
+
+    .MuiImageListItemBar-title {
+        font-size: 20px;
+    }
+    .MuiImageListItemBar-subtitle {
+        font-size: 15px;
+    }
+    .ant-image-img {
+        border-radius: 10px
+    }
 `;
 
 const CreativeTitle = styled.div`
@@ -50,9 +63,29 @@ const CreativeContent = styled.div`
                 20px 20px 0px 30px #270965;
     border-radius: 3px;
 
-    height: 100px;
+    // height: 100px;
 `;
 
+const SubTitle = styled.div`
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: ghostwhite;
+`;
+
+const SectionTitle = styled.div`
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 10px;
+    // color: ghostwhite;
+`;
+
+const Paragraph = styled.div`
+    font-size: 20px;
+    // min-width: 600px;
+    // padding: 0 10% 0 10%;
+
+`;
 
 const CreativeWorks: React.FC<{}> = () => {
     return (
@@ -63,16 +96,130 @@ const CreativeWorks: React.FC<{}> = () => {
             <br />
             <br />
             <CreativeContent>
-                <Row>
-                    <Col>
-                    </Col>
-                    <Col>
-                    </Col>
-                    <Col>
-                    </Col>
-                </Row>
-
-
+                <SubTitle>{`artwork`}</SubTitle>
+                <Paragraph>{`
+                    These are some artworks I've created. When I was younger, I was mostly a traditional artist, using pencils and markers.
+                    I started to pick up digital drawing more once I found that I had easier access to it most of the time.
+                    Below are some of the digital drawings I've done in the past few years.
+                `}
+                </Paragraph>
+                <br />
+                <Image.PreviewGroup
+                    preview={{
+                    onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
+                    }}
+                >
+                
+                    <ImageList 
+                        // variant="quilted" 
+                        cols={3} gap={12}>
+                        <ImageListItem key={"tst"}>
+                            <Image src="./images/catHeader.png" alt="catHeader"/>
+                            <ImageListItemBar position="below" 
+                                title={"tranquil cat"} 
+                                subtitle={"used as the header for this site!"} />
+                        </ImageListItem>
+                        <ImageListItem key={"tst"}>
+                            <Image src="./images/caveGirl.jpeg" alt="caveGirl"/>
+                            <ImageListItemBar position="below"
+                             title={"girl in a cave"} 
+                            //  subtitle={"used as the header for this site!"} 
+                        />
+                        </ImageListItem>
+                        <ImageListItem key={"tst"}>
+                            <Image src="./images/sleepyCat.jpg" alt="sleepyCat"/>
+                                <ImageListItemBar position="below"
+                                title={"sleepy cat"} 
+                                //  subtitle={"used as the header for this site!"} 
+                            />
+                        </ImageListItem>
+                        <ImageListItem key={"tst"}>
+                            <Image src="./images/hawaii.jpg" alt="hawaii"/>
+                            <ImageListItemBar position="below"
+                             title={"hawaii"} 
+                            //  subtitle={"used as the header for this site!"} 
+                            />
+                        </ImageListItem>
+                         
+                        {/*<ImageListItem key={"tst"}>
+                            <img src="./images/AdventureGame.png"/>
+                        </ImageListItem>
+                        <ImageListItem key={"tst"}>
+                            <img src="./images/AdventureGame.png"/>
+                        </ImageListItem>
+                        <ImageListItem key={"tst"}>
+                            <img src="./images/AdventureGame.png"/>
+                        </ImageListItem> */}
+                    </ImageList>
+                    </Image.PreviewGroup>
+                <br />
+                <SubTitle>{`animations`}</SubTitle>
+                <Paragraph>{`
+                    I have some (very) short animations I've done in the past few years. One I did as a capstone project in my last year of high school, 
+                    and also includes some of the concept art I had drawn up for it. The other is technically also considered a technical project
+                    as I implemented it with Three.js and OpenGL for an assignment. But I wanted to bring focus to the animations I 
+                    did for it and decided to put it in this section as well.
+                `}
+                <br /><br />
+                <SectionTitle>cat animation</SectionTitle>
+                <ImageList variant="masonry" cols={3} gap={12}>
+                        
+                        <ImageListItem key={"tst"}>
+                            <Image src="./images/catAnimation.jpg"
+                                alt="catAnimation"
+                                preview={{
+                                    imageRender: () => (
+                                      <YouTube 
+                                        videoId="kov8PXBQOxk"
+                                        style={{height:"1000"}}
+                                      />
+                                    ),
+                                    toolbarRender: () => null,
+                                }}
+                            />
+                            <ImageListItemBar position="below"
+                             title={"watch video"} 
+                            //  subtitle={"used as the header for this site!"} 
+                        />
+                        </ImageListItem>
+                </ImageList>
+                <br />
+                <SectionTitle>marble animation</SectionTitle>
+                <ImageList variant="masonry" cols={3} gap={12}>
+                        <ImageListItem key={"tst"}>
+                                <Image src="./images/caveGirl.jpeg" alt="test"/>
+                                <ImageListItemBar position="below"
+                                title={"girl in a cave"} 
+                                //  subtitle={"used as the header for this site!"} 
+                                />
+                        </ImageListItem>
+                        <ImageListItem key={"tst"}>
+                            <Image src="./images/caveGirl.jpeg" alt="test"/>
+                            <ImageListItemBar position="below"
+                             title={"girl in a cave"} 
+                            //  subtitle={"used as the header for this site!"} 
+                            />
+                        </ImageListItem>
+                        <ImageListItem key={"tst"}>
+                            <Image src="./images/catAnimation.jpg"
+                                alt="marbleAnimation"
+                                preview={{
+                                    imageRender: () => (
+                                      <YouTube 
+                                        videoId="500GanMZ2O0"
+                                        style={{height:"1000"}}
+                                      />
+                                    ),
+                                    toolbarRender: () => null,
+                                }}
+                            />
+                            <ImageListItemBar position="below"
+                             title={"watch video"} 
+                            //  subtitle={"used as the header for this site!"} 
+                        />
+                        </ImageListItem>
+                    </ImageList>
+                </Paragraph>
             </CreativeContent>
         </StyledCreativeWorks>
     )
