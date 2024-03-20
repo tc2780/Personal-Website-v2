@@ -40,15 +40,21 @@ const StyledTag = styled(Tag)`
     margin-top: 10px
 `;
 
+const ProjectDates = styled.div`
+    font-weight: bold;
+    font-style: italic;
+`;
+
 export interface CardProps {
     title: string,
+    dates: string,
     cover: React.ReactNode,
     description: string,
     tags: string[],
     actions?: React.ReactNode[];
 };
 
-const Card: React.FC<CardProps> = ({title, cover, description, tags, actions}) => {
+const Card: React.FC<CardProps> = ({title, dates, cover, description, tags, actions}) => {
     return (
         <Fade fraction={0.1}cascade damping={0.05}>
             <StyledCard
@@ -58,6 +64,7 @@ const Card: React.FC<CardProps> = ({title, cover, description, tags, actions}) =
             >
                 <div className="cardTitle">{title}</div>
                 <CardDescription>
+                    <ProjectDates>{dates}</ProjectDates>
                     {description}
                     <br /> 
                     {

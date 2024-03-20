@@ -1,5 +1,5 @@
 'use client'
-import { GithubOutlined, YoutubeOutlined } from "@ant-design/icons";
+import { GithubOutlined, InfoCircleOutlined, YoutubeOutlined } from "@ant-design/icons";
 import { Carousel, Col, Row, Tooltip } from "antd";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
@@ -90,14 +90,15 @@ const FeaturedProjects: React.FC<{}> = () => {
                     <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
                                 title = {"Harmonic Hustle (ongoing)"}
+                                dates={"Jan 2024 - Current"}
                                 cover={
                                     <Carousel infinite={false}>
-                                        <div>
+                                        {/* <div> */}
                                         <img alt="Harmonic Hustle" src="/images/HarmonicHustle.png" />
-                                        </div>
+                                        {/* </div>
                                         <div>
                                         <img alt="Harmonic Hustle" src="/images/HarmonicHustleBattle.png" />
-                                        </div>
+                                        </div> */}
                                     </Carousel>
                                 }
                                 description = {`
@@ -112,6 +113,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                         <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
                                 title={"Atomic Design Project"}
+                                dates={"Dec 2023"}
                                 cover={<img alt="Atomic Design Project" src="/images/atomicDesignProject.png" />}
                                 description={`
                                     This was created as part of a co-op project, and it focused on
@@ -136,6 +138,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                         <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
                                 title="Insight UBC"
+                                dates={"Sep - Dec 2022"}
                                 cover={<img alt="Insight UBC" src="/images/InsightUBCSite.png" />}
                                 description={`
                                     A school project created for CPSC 310: Software Engineering.
@@ -159,6 +162,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                         <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
                                 title="SOUUP: A Mental Health Check-In Site"
+                                dates={"March 2022"}
                                 cover={<img alt="SOUUP" src="/images/SOUUPSite.png" />}
                                 description={`
                                     Souup was the result of a hackathon project created for cmd-f 2022 and 
@@ -167,13 +171,18 @@ const FeaturedProjects: React.FC<{}> = () => {
                                     to let close ones know that they were ok and safe in the event that they 
                                     find it difficult to reach out. This way, instead of initiating a 
                                     conversation, the user simply has to open the site, log in, and press 
-                                    a button to send a pre-typed message. Selected for the UBC Project Incubation program.
+                                    a button to send a pre-typed message. Winner of the Project Incubation Prize.
                                 `}
                                 tags={["HTML", "CSS", "JavaScript", "Rest API"]}
                                 actions={[
                                     <a href="https://github.com/getbreadd/sooup" target="_blank" key = "link">
                                         <GithubOutlined style={{fontSize: "30px"}}/>
-                                    </a>
+                                    </a>,
+                                    <Tooltip title="Devpost Submission" key = "link">
+                                        <a href="https://devpost.com/software/sooup" target="_blank" key = "devpost">
+                                            <InfoCircleOutlined style={{fontSize: "30px"}}/>
+                                        </a>
+                                    </Tooltip>
                                         
                                 ]}
                             />

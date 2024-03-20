@@ -10,7 +10,7 @@ import { keyframes } from "@emotion/react";
 import dynamic from "next/dynamic";
 import Reveal from "react-awesome-reveal";
 
-
+// https://stackoverflow.com/questions/68596778/next-js-window-is-not-defined
 const DynamicNavBar = dynamic(() => import('@/components/navBar'),   { ssr: false })
 
 const customAnimation = keyframes`
