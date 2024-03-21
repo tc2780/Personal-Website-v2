@@ -131,6 +131,12 @@ const ContactMe: React.FC<{}> = () => {
                         <StyledForm name="form" method="POST" data-netlify="true"
                             layout={"vertical"}
                         >
+                            <Form.Item
+                                 name="title">
+                                    <p>{`
+                                        Or leave a message and I'll get back to you as soon as possible!
+                                        `}</p>
+                            </Form.Item>
                             <Form.Item label="Name: " name="name">
                                 <Input />
 
