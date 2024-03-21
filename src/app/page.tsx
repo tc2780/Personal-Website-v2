@@ -9,6 +9,7 @@ import WelcomeBox from "@/components/welcome";
 import { keyframes } from "@emotion/react";
 import dynamic from "next/dynamic";
 import Reveal from "react-awesome-reveal";
+import styled from "styled-components";
 
 // https://stackoverflow.com/questions/68596778/next-js-window-is-not-defined
 const DynamicNavBar = dynamic(() => import('@/components/navBar'),   { ssr: false })
@@ -23,6 +24,18 @@ const customAnimation = keyframes`
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+`;
+
+const FootNotes = styled.div`
+position: relative;
+  flex-direction: column;
+  color: ghostwhite;
+
+  font-size: 15px;
+  text-align: center;
+  // background-color: red;
+  // height: 100px;
+  padding: 20px;
 `;
 
 export default function Home() {
@@ -61,7 +74,17 @@ export default function Home() {
         <ProjectArchive />
 
         <ContactMe />
+        
       </Reveal>
+      <FootNotes>
+          {`
+            Designed and Developed by Tracy Chow
+          `}
+          <br />
+          {`
+            © 2024 Tracy Chow
+          `}
+        </FootNotes>
     </div>
   );
 }

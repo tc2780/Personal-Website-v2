@@ -1,6 +1,7 @@
 'use client'
-import { GithubOutlined, LinkedinFilled, LinkedinOutlined } from "@ant-design/icons";
-import { Col, Row } from "antd";
+import { GithubOutlined, LinkedinFilled, LinkedinOutlined, MailFilled } from "@ant-design/icons";
+import { Button, Col, ConfigProvider, Form, Input, Row } from "antd";
+import TextArea from "antd/es/input/TextArea";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import styled from 'styled-components';
@@ -38,7 +39,7 @@ const ContactTitle = styled.div`
 `;
 
 const ContactContent = styled.div`
-    // width: fit-content;
+    width: fit-content;
     padding-top: 20px;
 
     background-color: #3e207f;
@@ -49,7 +50,7 @@ const ContactContent = styled.div`
 `;
 
 const Link = styled.div`
-    font-size: 30px;
+    font-size: 25px;
 `;
 
 const SubTitle = styled.div`
@@ -59,8 +60,39 @@ const SubTitle = styled.div`
     color: ghostwhite;
 `;
 
+const StyledForm = styled(Form)`
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #673da6;
+`;
+
+
 const ContactMe: React.FC<{}> = () => {
     return (
+        <ConfigProvider
+        theme={{
+            token: {
+                colorText: "inherit",
+                fontSize: 20,
+                colorBgContainer: "#302d32",
+                colorBgTextHover: "red"
+            },
+            components: {
+                Input: {
+                    activeBg: "#141315",
+                    hoverBorderColor: "white",
+                    colorBorder: "#673da6"
+                },
+                Button: {
+                    defaultHoverBg: "#542a93",
+                    defaultHoverColor: "white",
+                    defaultHoverBorderColor: "white",
+                    defaultBorderColor: "ghostwhite"
+                }
+            }
+        }}
+        >
         <StyledContact id="contactSection">
             <Fade cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
                 <ContactTitle>contact me</ContactTitle>
@@ -69,53 +101,59 @@ const ContactMe: React.FC<{}> = () => {
             <br />
             <br />
             <ContactContent>
-                <Row>
+                <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 48]}>
                     <Col>
                         <SubTitle>
-                            Please feel free to contact me
+                            Please feel free to contact me!
                         </SubTitle>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <Link>
-                            <a href="http://github.com/tc2780" target="_blank">
-                                <GithubOutlined style={{paddingRight: "10px"}}/>
-                                GitHub
-                            </a>
-                        </Link>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
                         <Link>
                             <a href="https://www.linkedin.com/in/tracy-chow-6bab40189/" target="_blank">
                                 <LinkedinFilled style={{paddingRight: "10px"}}/>
                                 LinkedIn
                             </a>
                         </Link>
+                        <Link>
+                            <a href="mailto:Tracyc2780@gmail.com">
+                                <MailFilled style={{paddingRight: "10px"}}/>
+                                Email
+                            </a>
+                        </Link>
+                        <Link>
+                            <a href="http://github.com/tc2780" target="_blank">
+                                <GithubOutlined style={{paddingRight: "10px"}}/>
+                                GitHub
+                            </a>
+                        </Link>
+                        
                     </Col>
-                </Row>
-                <Row>
                     <Col>
-                        <form name="tesitng" method="POST" data-netlify="true">
-                        <p>
-                            <label>Your Name: <input type="text" name="name" /></label>
-                        </p>
-                        <p>
-                            <label>Your Email: <input type="email" name="email" /></label>
-                        </p>
-                        <p>
-                            <label>Message: <textarea name="message"></textarea></label>
-                        </p>
-                        <p>
-                            <button type="submit">Send</button>
-                        </p>
-                        </form>
+
+                        <StyledForm name="form" method="POST" data-netlify="true"
+                            layout={"vertical"}
+                        >
+                            <Form.Item label="Name: " name="name">
+                                <Input />
+
+                            </Form.Item>
+                            <Form.Item label="Email: " name="email">
+                                <Input />
+
+                            </Form.Item>
+                            <Form.Item label="Message: " name="message">
+                                <TextArea />
+
+                            </Form.Item>
+                            <Form.Item>
+                                <Button type="default" htmlType="submit">
+                                    Submit
+                                </Button>
+                            </Form.Item>
+                        </StyledForm>
                     </Col>
                 </Row>
             </ContactContent>
         </StyledContact>
+        </ConfigProvider>
     )
 }
 
