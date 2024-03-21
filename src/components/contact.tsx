@@ -77,8 +77,7 @@ const ContactMe: React.FC<{}> = () => {
     }
     const showSuccess = () => {
         // TODO: Show a success message or navigate to a success page.
-        message.info({
-            type: 'success',
+        message.success({
             content: 'Message sent! Thank you :)'
         })
         console.log(`form submitted successfully`);
@@ -88,8 +87,7 @@ const ContactMe: React.FC<{}> = () => {
         // TODO: Show an error message to the user
         console.log(`There was an error submitting the form`)
         console.log(error)
-        message.open({
-            type: 'error',
+        message.error({
             content: "Message couldn't send :( Could you please try again?"
         })
     }
