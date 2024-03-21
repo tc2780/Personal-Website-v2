@@ -67,9 +67,7 @@ const StyledForm = styled(Form)`
     background-color: #673da6;
 `;
 
-
 const ContactMe: React.FC<{}> = () => {
-    const [messageApi, contextHolder] = message.useMessage();
 
     // https://joeczubiak.com/netlify-contact-form-with-react-ant-design/
     function encode(data: { [x: string]: string | number | boolean; }) {
@@ -79,18 +77,18 @@ const ContactMe: React.FC<{}> = () => {
     }
     const showSuccess = () => {
         // TODO: Show a success message or navigate to a success page.
-        console.log(`form submitted successfully`);
-        messageApi.open({
+        message.info({
             type: 'success',
             content: 'Message sent! Thank you :)'
         })
+        console.log(`form submitted successfully`);
     }
 
     const showError = (error: any) => {
         // TODO: Show an error message to the user
         console.log(`There was an error submitting the form`)
         console.log(error)
-        messageApi.open({
+        message.open({
             type: 'error',
             content: "Message couldn't send :( Could you please try again?"
         })
