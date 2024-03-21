@@ -69,6 +69,38 @@ const StyledForm = styled(Form)`
 
 
 const ContactMe: React.FC<{}> = () => {
+    // https://joeczubiak.com/netlify-contact-form-with-react-ant-design/
+    function encode(data: { [x: string]: string | number | boolean; }) {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + `=` + encodeURIComponent(data[key]))
+            .join(`&`)
+    }
+    const showSuccess = () => {
+        // TODO: Show a success message or navigate to a success page.
+        console.log(`form submitted successfully`)
+    }
+
+    const showError = (error: any) => {
+        // TODO: Show an error message to the user
+        console.log(`There was an error submitting the form`)
+        console.log(error)
+    }
+    const handleSubmit=(values: any) => {
+        if (values[`bot-field`] === undefined) {
+            delete values[`bot-field`]
+        }
+    
+        fetch(`/`, {
+            method: `POST`,
+            headers: { 'Content-Type': `application/x-www-form-urlencoded` },
+            body: encode({
+                'form-name': "form",
+                ...values,
+            }),
+        })
+            .then(() => showSuccess())
+            .catch(error => showError(error))
+    }
     return (
         <ConfigProvider
         theme={{
@@ -76,13 +108,14 @@ const ContactMe: React.FC<{}> = () => {
                 colorText: "inherit",
                 fontSize: 20,
                 colorBgContainer: "#302d32",
-                colorBgTextHover: "red"
+                colorBgTextHover: "red",
+                colorError: "#ff7a7c"
             },
             components: {
                 Input: {
                     activeBg: "#141315",
                     hoverBorderColor: "white",
-                    colorBorder: "#673da6"
+                    colorBorder: "#673da6",
                 },
                 Button: {
                     defaultHoverBg: "#542a93",
@@ -127,21 +160,32 @@ const ContactMe: React.FC<{}> = () => {
                         
                     </Col>
                     <Col>
+                    <form
+                        name={"form"}
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        hidden
+                    >
+                        <input type="text" name="name" />
+                        <input type="email" name="email" />
+                        <textarea name="message"></textarea>
+                    </form>
 
                         <StyledForm name="form" method="POST" data-netlify="true"
-                            layout={"vertical"}
+                            layout={"vertical"} onFinish={handleSubmit}
                         >
                             <Form.Item
                                  name="title">
                                     <p>{`
                                         Or leave a message and I'll get back to you as soon as possible!
-                                        `}</p>
+                                        `}
+                                        </p>
                             </Form.Item>
                             <Form.Item label="Name: " name="name">
                                 <Input />
 
                             </Form.Item>
-                            <Form.Item label="Email: " name="email">
+                            <Form.Item label="Email: " name="email" rules={[{ type: 'email' }]}>
                                 <Input />
 
                             </Form.Item>
