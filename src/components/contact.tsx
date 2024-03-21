@@ -1,6 +1,6 @@
 'use client'
 import { GithubOutlined, LinkedinFilled, LinkedinOutlined, MailFilled } from "@ant-design/icons";
-import { Button, Col, ConfigProvider, Form, Input, Row } from "antd";
+import { Button, Col, ConfigProvider, Form, Input, Row, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
@@ -69,6 +69,8 @@ const StyledForm = styled(Form)`
 
 
 const ContactMe: React.FC<{}> = () => {
+    const [messageApi, contextHolder] = message.useMessage();
+
     // https://joeczubiak.com/netlify-contact-form-with-react-ant-design/
     function encode(data: { [x: string]: string | number | boolean; }) {
         return Object.keys(data)
@@ -77,13 +79,21 @@ const ContactMe: React.FC<{}> = () => {
     }
     const showSuccess = () => {
         // TODO: Show a success message or navigate to a success page.
-        console.log(`form submitted successfully`)
+        console.log(`form submitted successfully`);
+        messageApi.open({
+            type: 'success',
+            content: 'Message sent! Thank you :)'
+        })
     }
 
     const showError = (error: any) => {
         // TODO: Show an error message to the user
         console.log(`There was an error submitting the form`)
         console.log(error)
+        messageApi.open({
+            type: 'error',
+            content: "Message couldn't send :( Could you please try again?"
+        })
     }
     const handleSubmit=(values: any) => {
         if (values[`bot-field`] === undefined) {
