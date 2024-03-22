@@ -175,7 +175,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                                 `}
                                 tags={["HTML", "CSS", "JavaScript", "Rest API"]}
                                 actions={[
-                                    <a href="https://github.com/getbreadd/sooup" target="_blank" key = "link">
+                                    <a href="https://github.com/ariamj/Mental-Health-Check-In" target="_blank" key = "link">
                                         <GithubOutlined style={{fontSize: "30px"}}/>
                                     </a>,
                                     <Tooltip title="Devpost Submission" key = "link">

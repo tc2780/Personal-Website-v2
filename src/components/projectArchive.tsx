@@ -129,7 +129,7 @@ const ProjectArchive: React.FC<{}> = () => {
             actions: [<a href="https://github.com/tc2780/PersonalSite" target="_blank" key="test">
                         <GithubFilled style={{fontSize: "20px"}}/>
                     </a>,
-                    <a href="tc2780.github.io" target="_blank" key="test2">
+                    <a href="https://tc2780.github.io" target="_blank" key="test2">
                         <LinkOutlined style={{fontSize: "20px"}}/>
                     </a>,
                     ]
@@ -151,7 +151,8 @@ const ProjectArchive: React.FC<{}> = () => {
             description: 'Sep - Dec 2022',
             content: "A full stack application created for CPSC 304: Intro to Databases. " +
                     "Used to explore SQL, allowing users to insert, query and remove data as needed. " +
-                    "The frontend was built HTML, CSS, JS and PHP and is still available. However, it can no longer access the db",
+                    "The frontend was built HTML, CSS, JS and PHP and is still available. " +
+                    "Fair warning: it can no longer access the db as my credentials have expired, so it's very likely clicking the buttons *may* break the app.",
             imgSrc: "./images/GallerySite.png",
             actions: [
                 <a href="https://github.com/tc2780/GalleryManager" target="_blank" key="test">
