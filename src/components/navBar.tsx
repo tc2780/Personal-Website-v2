@@ -1,5 +1,6 @@
 'use client'
-import { Affix, Anchor, ConfigProvider } from "antd";
+import { GithubFilled, LinkedinFilled } from "@ant-design/icons";
+import { Affix, Anchor, Button, ConfigProvider } from "antd";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from 'styled-components';
 
@@ -27,6 +28,10 @@ const StyledNav = styled.div<NavProps>`
 
     background-color: ${({atTop}) => atTop ? "none" : "black"};
     transform: background-color 500ms linear;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 `
 
 const StyledAnchor = styled(Anchor)`
@@ -41,19 +46,12 @@ const NavBar: React.FC<{}> = () => {
     const vh = window.innerHeight;
     // useEffect(() => {
         const listenScrollEvent = (event: any) => {
-            // console.log("scroll: " + document.documentElement.scrollTop + "\n");
-            // console.log("vh: " + vh + "\n");
             if (document.documentElement.scrollTop > (vh)) {
                 setAtTop(false);
-                // console.log("SET FALSE");
             } else {
                 setAtTop(true);
-                // console.log("SET TRUE");
             }
-            // console.log(atTop);
         }
-
-        // useEffect(() => {
         window.addEventListener("scroll", listenScrollEvent);
 
         
@@ -109,6 +107,22 @@ const NavBar: React.FC<{}> = () => {
                         // offsetTop={100}
                         targetOffset={100}
                 />
+                <div>
+                    <Button 
+                        ghost 
+                        style={{border: "none"}}
+                        href="https://www.linkedin.com/in/tracy-chow-6bab40189/"
+                        target="_blank"
+                        icon={<LinkedinFilled style={{fontSize: "25px", paddingRight: "20px"}} />}
+                    />
+                    <Button 
+                        ghost 
+                        style={{border: "none"}}
+                        href="https://github.com/tc2780"
+                        target="_blank"
+                        icon={<GithubFilled style={{fontSize: "25px"}} />}
+                    />
+                </div>
             </StyledNav>
         </ConfigProvider>
     )

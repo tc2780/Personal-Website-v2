@@ -6,7 +6,9 @@ import FeaturedProjects from "@/components/featuredProjects";
 import NavBar from "@/components/navBar";
 import ProjectArchive from "@/components/projectArchive";
 import WelcomeBox from "@/components/welcome";
+import { GithubFilled } from "@ant-design/icons";
 import { keyframes } from "@emotion/react";
+import { Button } from "antd";
 import dynamic from "next/dynamic";
 import Reveal from "react-awesome-reveal";
 import styled from "styled-components";
@@ -82,8 +84,16 @@ export default function Home() {
           `}
           <br />
           {`
-            © 2024 Tracy Chow
+            Copyright © 2024 Tracy Chow
           `}
+          <br />
+          <Button 
+            ghost 
+            style={{border: "none"}}
+            href="https://github.com/tc2780/Personal-Website-v2"
+            target="_blank"
+            icon={<GithubFilled style={{fontSize: "25px", paddingTop: "5px"}} />}
+          />
         </FootNotes>
     </div>
   );

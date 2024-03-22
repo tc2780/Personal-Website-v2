@@ -124,16 +124,24 @@ const AboutMe: React.FC<{}> = () => {
                             My name is Tracy and I'm a 4th year Computer Science student at the University of British Columbia.
                             I enjoy solving and creating, and while exploring my career paths during the beginning of
                             univeristy, I found that developing was a way for me to pursue both of those interests!
-                            With that, this page will hold a bit of info on both my technical and creative projects, as well as
-                            a short summary of my skills and how to contact me.
+                            With that, this page will hold a bit of information about both of my technical and creative projects. 
+                            I also have an archive of all of my technical projects as a way to look back on my progress, and 
+                            have included a contact section if you would like to get in contact with me.
                         `}
                     </Paragraph>
                     <br /> <br />
                     <SubTitle>a bit of my background</SubTitle>
                     <Paragraph>
-                    {`
+                    {/* {`
                         I've previously worked as a Junior Quality Assurance Engineer and a Software Engineer Co-op, 
                         and I expect to graduate May 2026. 
+                    `} */}
+                    {`
+                        I started uni in 2020 and joined the co-op program during my second year. I've previously worked two 8-month co-op placements. One as a Junior Quality Assurance Engineer, where I 
+                        focused on developing and running automated tests for regression and for new features. More recently I worked
+                        as a Software Engineer working on a fullstack web application at a smaller company. Here, I was given a wider variety of tasks, 
+                        and worked on implementing new features, fixing bugs, and test automation. Currently, I'm in school and focusing on my courses.
+                        I expect to graduate May 2026.
                     `}
                     </Paragraph>
                     <br /> <br />
