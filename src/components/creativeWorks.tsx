@@ -99,9 +99,8 @@ const CreativeWorks: React.FC<{}> = () => {
                 <Fade fraction={0.1} cascade damping={0.05} >
                     <SubTitle>{`artwork`}</SubTitle>
                     <Paragraph>{`
-                        These are some artworks I've created. When I was younger, I was mostly a traditional artist, using pencils and markers.
-                        I started to pick up digital drawing more once I found that I had easier access to it most of the time.
-                        Below are some of the digital drawings I've done in the past few years.
+                        These are some artworks I've created. I started with traditional art, and over the past few years, I've also 
+                        started experimenting with digital art. I'm not the best, but I had a lot of fun creating these!
                     `}
                     </Paragraph>
                 </Fade>
@@ -113,7 +112,7 @@ const CreativeWorks: React.FC<{}> = () => {
                 >
                 
                     <ImageList 
-                        // variant="quilted" 
+                        variant="masonry" 
                         cols={3} gap={12}>
                         <Fade cascade damping={0.05} >
                             <ImageListItem key={"tst"}>
@@ -143,16 +142,14 @@ const CreativeWorks: React.FC<{}> = () => {
                                 //  subtitle={"used as the header for this site!"} 
                                 />
                             </ImageListItem>
+                            <ImageListItem key={"tst"}>
+                                <Image src="./images/justALight.JPG" alt="light"/>
+                                <ImageListItemBar position="below"
+                                title={"just a light"} 
+                                //  subtitle={"used as the header for this site!"} 
+                                />
+                            </ImageListItem>
                             
-                            {/*<ImageListItem key={"tst"}>
-                                <img src="./images/AdventureGame.png"/>
-                            </ImageListItem>
-                            <ImageListItem key={"tst"}>
-                                <img src="./images/AdventureGame.png"/>
-                            </ImageListItem>
-                            <ImageListItem key={"tst"}>
-                                <img src="./images/AdventureGame.png"/>
-                            </ImageListItem> */}
                         </Fade>
                     </ImageList>
                     </Image.PreviewGroup>
@@ -198,33 +195,38 @@ const CreativeWorks: React.FC<{}> = () => {
                 <Fade cascade fraction={0.1} damping={0.05} >
                     <SectionTitle>marble animation</SectionTitle>
                 </Fade>
+                <Image.PreviewGroup
+                    preview={{
+                    onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
+                    }}
+                >
                 <ImageList 
-                    // variant="masonry" 
+                    variant="masonry" 
                     cols={3} gap={12}>
                 <Fade cascade fraction={0.1} damping={0.05} >
                         <ImageListItem key={"tst"}>
-                                <Image src="./images/caveGirl.jpeg" alt="test"/>
+                                <Image src="./images/blueConcept.JPG" alt="test"/>
                                 <ImageListItemBar position="below"
                                 title={"blue marble concept art"} 
                                 //  subtitle={"used as the header for this site!"} 
                                 />
                         </ImageListItem>
                         <ImageListItem key={"tst"}>
-                                <Image src="./images/caveGirl.jpeg" alt="test"/>
+                                <Image src="./images/purpleConcept.JPG" alt="test"/>
                                 <ImageListItemBar position="below"
                                 title={"purple marble concept art"} 
                                 //  subtitle={"used as the header for this site!"} 
                                 />
                         </ImageListItem>
                         <ImageListItem key={"tst"}>
-                            <Image src="./images/caveGirl.jpeg" alt="test"/>
+                            <Image src="./images/blueStyled.JPG" alt="test"/>
                             <ImageListItemBar position="below"
                              title={"blue in chosen art style"} 
                             //  subtitle={"used as the header for this site!"} 
                             />
                         </ImageListItem>
                         <ImageListItem key={"tst"}>
-                            <Image src="./images/caveGirl.jpeg" alt="test"/>
+                            <Image src="./images/purpleStyled.JPG" alt="test"/>
                             <ImageListItemBar position="below"
                              title={"purple in chosen art style"} 
                             //  subtitle={"used as the header for this site!"} 
@@ -260,7 +262,8 @@ const CreativeWorks: React.FC<{}> = () => {
                         </ImageListItem> */}
                         </Fade>
                     </ImageList>
-                    <ImageList>
+                    </Image.PreviewGroup>
+                    <ImageList style={{paddingTop: "30px"}}>
                         <Fade damping={0.05} >
                         <ImageListItem>
                             <YouTube videoId="500GanMZ2O0" />
