@@ -102,7 +102,7 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: './images/websiteV2.png',
             description: 'March 2024 - Current',
             content: 'The second iteration of my personal site. Created with React, TypeScript and hosted on Netlify.',
-            actions: [<a href="https://github.com/tc2780/reactSite" target="_blank" key="test">
+            actions: [<a href="https://github.com/tc2780/Personal-Website-v2" target="_blank" key="test">
                         <GithubFilled />
                     </a>]
         },
@@ -168,7 +168,7 @@ const ProjectArchive: React.FC<{}> = () => {
             content: "Cmd-f 2022 Hackathon Project. Users are able to send simple messages to loved ones by clicking a button. Winner of the Project Incubation Prize",
             imgSrc: "./images/SOUUPSite.png",
             actions: [
-                <a href="https://github.com/getbreadd/sooup" target="_blank" key="test">
+                <a href="https://github.com/ariamj/Mental-Health-Check-In" target="_blank" key="test">
                     <GithubFilled />
                 </a>,
                 <a href="https://devpost.com/software/sooup" target="_blank" key="test2">
