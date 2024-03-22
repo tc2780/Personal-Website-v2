@@ -11,9 +11,8 @@ const StyledCreativeWorks = styled.div`
     align-items: left;
     flex-direction: column;
     width: inherit;
-    margin: 0 26% 0 6%;
+    margin: 80px 26% 0 6%;
     padding: 4% 4% 4% 4%;
-    margin-top: 50px;
 
     // background-color: #2F1B5B;
     // border-radius: 50px;

@@ -183,7 +183,7 @@ const ContactMe: React.FC<{}> = () => {
                             <Form.Item
                                  name="title">
                                     <p>{`
-                                        Or leave a message and I'll get back to you as soon as possible!
+                                        Or fill out this form to leave a message and I'll get back to you as soon as possible!
                                         `}
                                         </p>
                             </Form.Item>

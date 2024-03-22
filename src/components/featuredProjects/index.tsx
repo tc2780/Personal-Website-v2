@@ -1,5 +1,5 @@
 'use client'
-import { GithubOutlined, InfoCircleOutlined, YoutubeOutlined } from "@ant-design/icons";
+import { GithubOutlined, InfoCircleOutlined, LinkOutlined, YoutubeOutlined } from "@ant-design/icons";
 import { Carousel, Col, Row, Tooltip } from "antd";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
@@ -13,7 +13,7 @@ const SyledFeatured = styled.div`
     flex-direction: column;
     // min-width: 600px;
     // padding: 0 10% 0 30%;
-    margin: 150px 8% 0 20%;
+    margin: 100px 8% 0 20%;
     text-align: left;
     // width: 100%;
 
@@ -180,7 +180,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                                     </a>,
                                     <Tooltip title="Devpost Submission" key = "link">
                                         <a href="https://devpost.com/software/sooup" target="_blank" key = "devpost">
-                                            <InfoCircleOutlined style={{fontSize: "30px"}}/>
+                                            <LinkOutlined style={{fontSize: "30px"}}/>
                                         </a>
                                     </Tooltip>
                                         
