@@ -88,9 +88,9 @@ const Paragraph = styled.div`
 
 const CreativeWorks: React.FC<{}> = () => {
     return (
-        <StyledCreativeWorks id="creativeSection">
+        <StyledCreativeWorks >
             <Fade cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
-                <CreativeTitle>creative works</CreativeTitle>
+                <CreativeTitle id="creativeSection">creative works</CreativeTitle>
             </Fade>
             <br />
             <br />

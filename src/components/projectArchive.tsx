@@ -103,7 +103,7 @@ const ProjectArchive: React.FC<{}> = () => {
             description: 'March 2024 - Current',
             content: 'The second iteration of my personal site. Created with React, TypeScript and hosted on Netlify.',
             actions: [<a href="https://github.com/tc2780/Personal-Website-v2" target="_blank" key="test">
-                        <GithubFilled />
+                        <GithubFilled style={{fontSize: "20px"}}/>
                     </a>]
         },
         {
@@ -118,7 +118,7 @@ const ProjectArchive: React.FC<{}> = () => {
             description: 'Dec 2023',
             content: "A project created to explore components and the atomic design theory. Used Storybook to more easily visualize the components and the atomic design breakdown.",
             actions: [<a href="https://github.com/tc2780/atomic-design-project" target="_blank" key="test">
-                        <GithubFilled />
+                        <GithubFilled style={{fontSize: "20px"}}/>
                     </a>]
         },
         {
@@ -127,10 +127,10 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: "./images/websiteV1.png",
             content: "The very first iteration of my personal website, created with HTML, CSS and Bootstrap. Hosted on GitHub pages",
             actions: [<a href="https://github.com/tc2780/PersonalSite" target="_blank" key="test">
-                        <GithubFilled />
+                        <GithubFilled style={{fontSize: "20px"}}/>
                     </a>,
                     <a href="tc2780.github.io" target="_blank" key="test2">
-                        <LinkOutlined />
+                        <LinkOutlined style={{fontSize: "20px"}}/>
                     </a>,
                     ]
         },
@@ -142,7 +142,7 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: "./images/InsightUBCSite.png",
             actions: [
                 <a href="https://youtu.be/dd42775Kg0E" target="_blank" key="test">
-                    <YoutubeFilled />
+                    <YoutubeFilled style={{fontSize: "20px"}}/>
                 </a>
             ]
         }, 
@@ -155,10 +155,10 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: "./images/GallerySite.png",
             actions: [
                 <a href="https://github.com/tc2780/GalleryManager" target="_blank" key="test">
-                    <GithubFilled />
+                    <GithubFilled style={{fontSize: "20px"}}/>
                 </a>,
                 <a href="https://www.students.cs.ubc.ca/~tc2780/304GalleryManager/index.php" target="_blank" key="test2">
-                    <LinkOutlined />
+                    <LinkOutlined style={{fontSize: "20px"}}/>
                 </a>
             ]
         },
@@ -169,10 +169,10 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: "./images/SOUUPSite.png",
             actions: [
                 <a href="https://github.com/ariamj/Mental-Health-Check-In" target="_blank" key="test">
-                    <GithubFilled />
+                    <GithubFilled style={{fontSize: "20px"}}/>
                 </a>,
                 <a href="https://devpost.com/software/sooup" target="_blank" key="test2">
-                    <LinkOutlined />
+                    <LinkOutlined style={{fontSize: "20px"}}/>
                 </a>
             ]
         },
@@ -184,7 +184,7 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: "./images/MarbleSite.png",
             actions: [
                 <a href="https://github.com/tc2780/MarbleSite" target="_blank" key="test">
-                    <GithubFilled />
+                    <GithubFilled style={{fontSize: "20px"}}/>
                 </a>
             ]
         },
@@ -196,10 +196,10 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: "./images/AdventureGame.png",
             actions: [
                 <a href="https://github.com/tc2780/AdventureGame" target="_blank" key="test">
-                    <GithubFilled />
+                    <GithubFilled style={{fontSize: "20px"}}/>
                 </a>,
                 <a href="https://youtu.be/WKJdoBwSqiQ" target="_blank" key="test2">
-                    <YoutubeFilled />
+                    <YoutubeFilled style={{fontSize: "20px"}}/>
                 </a>
             ]
         },
@@ -210,7 +210,7 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: "./images/BlackJackConsole.png",
             actions: [
                 <a href="https://github.com/tc2780/Blackjack" target="_blank" key="test">
-                    <GithubFilled />
+                    <GithubFilled style={{fontSize: "20px"}}/>
                 </a>
             ]
         }

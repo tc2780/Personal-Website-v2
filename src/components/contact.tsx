@@ -132,9 +132,9 @@ const ContactMe: React.FC<{}> = () => {
             }
         }}
         >
-        <StyledContact id="contactSection">
+        <StyledContact>
             <Fade cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
-                <ContactTitle>contact me</ContactTitle>
+                <ContactTitle id="contactSection">contact me</ContactTitle>
             </Fade>
             <br />
             <br />
