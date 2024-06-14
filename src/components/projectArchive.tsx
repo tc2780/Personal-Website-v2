@@ -109,7 +109,7 @@ const ProjectArchive: React.FC<{}> = () => {
         {
             title: `Harmonic Hustle`,
             imgSrc: './images/HarmonicHustle.png',
-            description: 'Jan 2024 - Current',
+            description: 'Jan - April 2024',
             content: 'A rhythm game created for CPSC 427: Video Game Programming',
         },
         {
@@ -241,7 +241,7 @@ const ProjectArchive: React.FC<{}> = () => {
         >
         <StyledArchive id="archivedSection">
             <Fade damping={0.05}>
-                <ArchiveTitle>past projects</ArchiveTitle>
+                <ArchiveTitle>archived projects</ArchiveTitle>
             </Fade>
             <ArchiveContent>
                 <Fade cascade damping={0.05}>

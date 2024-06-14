@@ -89,12 +89,12 @@ const FeaturedProjects: React.FC<{}> = () => {
                     <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 16]}>
                     <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
-                                title = {"Harmonic Hustle (ongoing)"}
-                                dates={"Jan 2024 - Current"}
+                                title = {"Harmonic Hustle"}
+                                dates={"Jan - April 2024"}
                                 cover={
                                     <Carousel infinite={false}>
                                         {/* <div> */}
-                                        <img alt="Harmonic Hustle" src="/images/HarmonicHustle.png" />
+                                        <img alt="Harmonic Hustle" src="/images/HarmonicHustle-updated.png" />
                                         {/* </div>
                                         <div>
                                         <img alt="Harmonic Hustle" src="/images/HarmonicHustleBattle.png" />
@@ -102,12 +102,16 @@ const FeaturedProjects: React.FC<{}> = () => {
                                     </Carousel>
                                 }
                                 description = {`
-                                    This is an ongoing project for the CPSC 427: Video Game Programming course at UBC. 
-                                    Working on a small team of 6, we're creating a rhythm game while learning about 
-                                    game development. Players are able to wander in the overworld and collide with
-                                    enemies to trigger different rhythm battles and advance levels.
+                                    Designed and developed in a small team of 5 for the CPSC 427: Video Game
+                                    Programming course at UBC. We created a rhythm game that involved overworld 
+                                    mechanics, allowing enemies to explore the map and trigger challenge battles.
+                                    We also included different 'modes' for the battle, allowing for a more engaging
+                                    rhythm game mechanic. All art and music were created by (very talented) members of the team.
                                 `}
                                 tags={["C++", "OpenGL", "C"]}
+                                actions={[
+                                    // https://www.students.cs.ubc.ca/~cs-427/games/ TODO: update once game is added to course site
+                                ]}
                                 />
                         </Col>
                         <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
