@@ -106,11 +106,17 @@ const FeaturedProjects: React.FC<{}> = () => {
                                     Programming course at UBC. We created a rhythm game that involved overworld 
                                     mechanics, allowing enemies to explore the map and trigger challenge battles.
                                     We also included different 'modes' for the battle, allowing for a more engaging
-                                    rhythm game mechanic. All art and music were created by (very talented) members of the team.
+                                    rhythm game mechanic. All art and music were created by members of the team.
                                 `}
                                 tags={["C++", "OpenGL", "C"]}
                                 actions={[
-                                    // https://www.students.cs.ubc.ca/~cs-427/games/ TODO: update once game is added to course site
+                                    <a href="https://www.students.cs.ubc.ca/~cs-427/games" target="_blank" key = "link">
+                                        <LinkOutlined style={{fontSize: "30px"}}/>
+                                    </a>,
+                                    <a href="https://www.youtube.com/watch?v=lfx6yT8nD4E" target="_blank" key = "link">
+                                       <YoutubeOutlined style={{fontSize: "30px"}}/>
+                                    </a>
+                            
                                 ]}
                                 />
                         </Col>
