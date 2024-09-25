@@ -1,10 +1,11 @@
 'use client'
 import { GithubOutlined, LinkedinFilled, LinkedinOutlined, MailFilled } from "@ant-design/icons";
-import { Button, Col, ConfigProvider, Form, Input, Row, message } from "antd";
+import { Button, Col, ConfigProvider, Form, Input, Row, Spin, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import styled from 'styled-components';
+const {useState} = React;
 
 
 const StyledContact = styled.div`
@@ -67,7 +68,16 @@ const StyledForm = styled(Form)`
     background-color: #673da6;
 `;
 
+const StyledSpin = styled(Spin)`
+    padding-left: 15px;
+    .ant-spin-dot-item {
+    background-color: white;
+    }
+`
+
 const ContactMe: React.FC<{}> = () => {
+
+    const [isLoading, setIsLoading] = useState(false)
 
     // https://joeczubiak.com/netlify-contact-form-with-react-ant-design/
     function encode(data: { [x: string]: string | number | boolean; }) {
@@ -91,22 +101,29 @@ const ContactMe: React.FC<{}> = () => {
             content: "Message couldn't send :( Could you please try again?"
         })
     }
-    const handleSubmit=(values: any) => {
-        if (values[`bot-field`] === undefined) {
-            delete values[`bot-field`]
-        }
+    const handleSubmit = async (values: any) => {
+        try {
+            setIsLoading(true)
+            const res = await fetch('/__forms.html', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: encode({
+                    'form-name': "contact-form",
+                    ...values,
+                }),
+            })
+            if (res.status == 200) {
+                showSuccess()
+            } else {
+                showError("Failed to send: " + res.status + res.statusText)
+            }
+            setIsLoading(false)
+        } catch (error) {
+            showError(error)
+            setIsLoading(false)
+        } 
+    };
     
-        fetch(`/`, {
-            method: `POST`,
-            headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-            body: encode({
-                'form-name': "form",
-                ...values,
-            }),
-        })
-            .then(() => showSuccess())
-            .catch(error => showError(error))
-    }
     return (
         <ConfigProvider
         theme={{
@@ -166,19 +183,12 @@ const ContactMe: React.FC<{}> = () => {
                         
                     </Col>
                     <Col>
-                    <form
-                        name={"form"}
-                        data-netlify="true"
-                        data-netlify-honeypot="bot-field"
-                        hidden
-                    >
-                        <input type="text" name="name" />
-                        <input type="email" name="email" />
-                        <textarea name="message"></textarea>
-                    </form>
-
-                        <StyledForm name="form" method="POST" data-netlify="true"
-                            layout={"vertical"} onFinish={handleSubmit}
+                        <StyledForm name="contact-form"
+                            method="POST" 
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
+                            layout={"vertical"} 
+                            onFinish={handleSubmit}
                         >
                             <Form.Item
                                  name="title">
@@ -203,6 +213,9 @@ const ContactMe: React.FC<{}> = () => {
                                 <Button type="default" htmlType="submit">
                                     Submit
                                 </Button>
+                                {isLoading &&
+                                    <StyledSpin />
+                                }
                             </Form.Item>
                         </StyledForm>
                     </Col>
