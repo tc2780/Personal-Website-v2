@@ -207,6 +207,7 @@ const ContactMe: React.FC<{}> = () => {
                             layout={"vertical"} 
                             onFinish={handleSubmit}
                         >
+                            <input type="hidden" name="contact-form" value="contact" />
                             <Form.Item
                                  name="title">
                                     <p>{`
