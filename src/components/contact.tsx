@@ -107,27 +107,37 @@ const ContactMe: React.FC<{}> = () => {
     //         .then(() => showSuccess())
     //         .catch(error => showError(error))
     // }
-    const handleSubmit = async (values: any) => {
+    const handleSubmit = async (event: any) => {
         // event.preventDefault();
       
-        // const myForm = event.target;
-        // const formData = new FormData(myForm);
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        await fetch('/__forms.html', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData as any).toString()
+            // body: encode({
+            //     'form-name': "contact-form",
+            //     ...values,
+            // }),
+        }).then(() => showSuccess())
+        .catch((error) => showError(error));
         
         // fetch("/", {
         //     method: "POST",
         //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
         //     body: new URLSearchParams(formData as any).toString(),
         // })
-        fetch(`/`, {
-            method: `POST`,
-            headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-            body: encode({
-                'form-name': "contact-form",
-                ...values,
-            }),
-        })
-        .then(() => showSuccess())
-        .catch((error) => showError(error));
+        // fetch(`/__forms.html`, {
+        //     method: `POST`,
+        //     headers: { 'Content-Type': `application/x-www-form-urlencoded` },
+        //     body: encode({
+        //         'form-name': "contact-form",
+        //         ...values,
+        //     }),
+        // })
+        // .then(() => showSuccess())
+        // .catch((error) => showError(error));
     };
     return (
         <ConfigProvider
@@ -204,6 +214,7 @@ const ContactMe: React.FC<{}> = () => {
                         //  className="form_submit_button"
                             method="POST" 
                             data-netlify="true"
+                            data-netlify-honeypot="bot-field"
                             layout={"vertical"} 
                             onFinish={handleSubmit}
                         >
