@@ -1,0 +1,46 @@
+'use client'
+const handleSubmit = (event) => {
+    event.preventDefault();
+  
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+    
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
+  
+document
+    .querySelector("form_submit_button")
+    .addEventListener("submit", handleSubmit);
+
+
+<!-- https://docs.netlify.com/frameworks/next-js/overview/#netlify-forms-compatibility
+export function ContactForm() {
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        await fetch('/__forms.html', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams(formData).toString()
+        });
+    }
+}
+
+return (
+    <form
+    name="form"
+    onSubmit={handleFormSubmit}
+    hidden
+    >
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+    <button type="Submit"></button>
+    </form>
+) -->

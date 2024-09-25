@@ -91,22 +91,48 @@ const ContactMe: React.FC<{}> = () => {
             content: "Message couldn't send :( Could you please try again?"
         })
     }
-    const handleSubmit=(values: any) => {
-        if (values[`bot-field`] === undefined) {
-            delete values[`bot-field`]
-        }
+    // const handleSubmit=(values: any) => {
+    //     if (values[`bot-field`] === undefined) {
+    //         delete values[`bot-field`]
+    //     }
     
-        fetch(`/`, {
-            method: `POST`,
-            headers: { 'Content-Type': `application/x-www-form-urlencoded` },
-            body: encode({
-                'form-name': "form",
-                ...values,
-            }),
+    //     fetch(`/`, {
+    //         method: `POST`,
+    //         headers: { 'Content-Type': `application/x-www-form-urlencoded` },
+    //         body: encode({
+    //             'form-name': "form",
+    //             ...values,
+    //         }),
+    //     })
+    //         .then(() => showSuccess())
+    //         .catch(error => showError(error))
+    // }
+    // const handleSubmit = async (event: any) => {
+    //     event.preventDefault();
+    //     const formData = new FormData(event.target);
+    //     await fetch('/__forms.html', {
+    //         method: 'POST',
+    //         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    //         body: new URLSearchParams(formData).toString()
+    //     });
+    //     showSuccess()
+    //     // .then(() => showSuccess())
+    //     //     .catch(error => showError(error))
+    // }
+    const handleSubmit = (event: any) => {
+        // event.preventDefault();
+      
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData as any).toString(),
         })
-            .then(() => showSuccess())
-            .catch(error => showError(error))
-    }
+        .then(() => showSuccess())
+        .catch((error) => showError(error));
+    };
     return (
         <ConfigProvider
         theme={{
@@ -177,8 +203,12 @@ const ContactMe: React.FC<{}> = () => {
                         <textarea name="message"></textarea>
                     </form>
 
-                        <StyledForm name="form" method="POST" data-netlify="true"
-                            layout={"vertical"} onFinish={handleSubmit}
+                        <StyledForm name="form"
+                        //  className="form_submit_button"
+                        method="POST" 
+                        data-netlify="true"
+                            layout={"vertical"} 
+                            onFinish={handleSubmit}
                         >
                             <Form.Item
                                  name="title">
