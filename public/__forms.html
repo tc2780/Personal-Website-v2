@@ -1,5 +1,20 @@
 'use client'
-const handleSubmit = (event) => {
+
+<html>
+    <head></head>
+    <body>
+        <form name="contact-form" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+            <input type="hidden" name="form-name" value="feedback" />
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
+        </form>
+    </body>
+</html>
+
+
+<!-- const handleSubmit = (event) => {
+    console.log("HERE TEST")
     event.preventDefault();
   
     const myForm = event.target;
@@ -15,32 +30,5 @@ const handleSubmit = (event) => {
 };
   
 document
-    .querySelector("form_submit_button")
-    .addEventListener("submit", handleSubmit);
-
-
-<!-- https://docs.netlify.com/frameworks/next-js/overview/#netlify-forms-compatibility
-export function ContactForm() {
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        await fetch('/__forms.html', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            body: new URLSearchParams(formData).toString()
-        });
-    }
-}
-
-return (
-    <form
-    name="form"
-    onSubmit={handleFormSubmit}
-    hidden
-    >
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <textarea name="message"></textarea>
-    <button type="Submit"></button>
-    </form>
-) -->
+    .querySelector("form")
+    .addEventListener("submit", handleSubmit); -->

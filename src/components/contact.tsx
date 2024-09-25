@@ -107,28 +107,24 @@ const ContactMe: React.FC<{}> = () => {
     //         .then(() => showSuccess())
     //         .catch(error => showError(error))
     // }
-    // const handleSubmit = async (event: any) => {
-    //     event.preventDefault();
-    //     const formData = new FormData(event.target);
-    //     await fetch('/__forms.html', {
-    //         method: 'POST',
-    //         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-    //         body: new URLSearchParams(formData).toString()
-    //     });
-    //     showSuccess()
-    //     // .then(() => showSuccess())
-    //     //     .catch(error => showError(error))
-    // }
-    const handleSubmit = (event: any) => {
+    const handleSubmit = async (values: any) => {
         // event.preventDefault();
       
-        const myForm = event.target;
-        const formData = new FormData(myForm);
+        // const myForm = event.target;
+        // const formData = new FormData(myForm);
         
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData as any).toString(),
+        // fetch("/", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        //     body: new URLSearchParams(formData as any).toString(),
+        // })
+        fetch(`/`, {
+            method: `POST`,
+            headers: { 'Content-Type': `application/x-www-form-urlencoded` },
+            body: encode({
+                'form-name': "form",
+                ...values,
+            }),
         })
         .then(() => showSuccess())
         .catch((error) => showError(error));
@@ -192,21 +188,22 @@ const ContactMe: React.FC<{}> = () => {
                         
                     </Col>
                     <Col>
-                    <form
+                    {/* <form
                         name={"form"}
                         data-netlify="true"
                         data-netlify-honeypot="bot-field"
-                        hidden
+                        // hidden
                     >
                         <input type="text" name="name" />
                         <input type="email" name="email" />
                         <textarea name="message"></textarea>
-                    </form>
+                        <button name="submit"></button>
+                    </form> */}
 
-                        <StyledForm name="form"
+                        <StyledForm name="contact-form"
                         //  className="form_submit_button"
-                        method="POST" 
-                        data-netlify="true"
+                            method="POST" 
+                            data-netlify="true"
                             layout={"vertical"} 
                             onFinish={handleSubmit}
                         >
