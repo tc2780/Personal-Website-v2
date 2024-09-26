@@ -31,6 +31,10 @@ const StyledArchive = styled.div`
         font-size: 16px;
     }
 
+    .ant-pagination-item:not(.ant-pagination-item-active){
+        border: 1px solid #160a2d
+    }
+
 `;
 
 const ArchiveTitle = styled.div`
@@ -235,6 +239,7 @@ const ProjectArchive: React.FC<{}> = () => {
                         colorPrimaryHover: "white",
                         colorPrimary: "#7f7ff2",
                         colorBgTextHover: "#7f7ff2",
+                        itemBg: "#3e207f",
                     }
                 }
             }}
