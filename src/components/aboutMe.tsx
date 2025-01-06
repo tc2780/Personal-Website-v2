@@ -118,30 +118,24 @@ const AboutMe: React.FC<{}> = () => {
             <br />
             <AboutContent>
                 <Fade fraction={0.1}cascade damping={0.05}>
-                    <SubTitle>a small intro</SubTitle>
+                    {/* <SubTitle>a small intro</SubTitle> */}
+                    <br />
                     <Paragraph>
                         {`
-                            My name is Tracy and I'm a 4th year Computer Science student at the University of British Columbia.
-                            I enjoy solving and creating, and while exploring my career paths during the beginning of
-                            univeristy, I found that developing was a way for me to pursue both of those interests!
-                            With that, this page will hold a bit of information about both of my technical and creative projects. 
-                            I also have an archive of all of my technical projects as a way to look back on my progress, and 
-                            have included a contact section if you would like to get in contact with me.
+                            My name is Tracy and I’m currently a 4th year Computer Science student at the University of British Columbia.
+                            I enjoy problem solving as well as creating. Exploring and developing my skills in both software development and art.
+                            This page will feature technical and creative projects I’ve worked on.
                         `}
                     </Paragraph>
-                    <br /> <br />
-                    <SubTitle>a bit of my background</SubTitle>
+                    <br />
+                    {/* <br /> */}
+                    {/* <SubTitle>a bit of my background</SubTitle> */}
                     <Paragraph>
-                    {/* {`
-                        I've previously worked as a Junior Quality Assurance Engineer and a Software Engineer Co-op, 
-                        and I expect to graduate May 2026. 
-                    `} */}
                     {`
-                        I started uni in 2020 and joined the co-op program during my second year. I've previously worked two 8-month co-op placements. One as a Junior Quality Assurance Engineer, where I 
-                        focused on developing and running automated tests for regression and for new features. More recently I worked
-                        as a Software Engineer working on a fullstack web application at a smaller company. Here, I was given a wider variety of tasks, 
-                        and worked on implementing new features, fixing bugs, and test automation. Currently, I'm in school and focusing on my courses.
-                        I expect to graduate May 2026.
+                        As a 4th year CS student in the co-op program,
+                        I’ve gained a solid foundation of skills applicable to software development,
+                        and have worked in a variety of independent and team settings.
+                        My expected graduation is April 2026.
                     `}
                     </Paragraph>
                     <br /> <br />
@@ -149,19 +143,15 @@ const AboutMe: React.FC<{}> = () => {
                     <Skills>
                         <StyledTag bordered={false}>React</StyledTag>
                         <StyledTag bordered={false}>TypeScript</StyledTag>
+                        <StyledTag bordered={false}>Python</StyledTag>
                         <StyledTag bordered={false}>Java</StyledTag>
                         <StyledTag bordered={false}>JavaScript</StyledTag>
-                        <StyledTag bordered={false}>Node.js</StyledTag>
                         <StyledTag bordered={false}>ThreeJS</StyledTag>
                         <StyledTag bordered={false}>OpenGL</StyledTag>
                         <StyledTag bordered={false}>C++</StyledTag>
                         <StyledTag bordered={false}>C</StyledTag>
                         <StyledTag bordered={false}>HTML</StyledTag>
                         <StyledTag bordered={false}>CSS</StyledTag>
-                        {/* <StyledTag bordered={false}>Jest</StyledTag>
-                        <StyledTag bordered={false}>Mocha</StyledTag>
-                        <StyledTag bordered={false}>Chai</StyledTag>
-                        <StyledTag bordered={false}>JUnit</StyledTag> */}
                         <StyledTag bordered={false}>SQL</StyledTag>
                         <StyledTag bordered={false}>PHP</StyledTag>
                     </Skills>
