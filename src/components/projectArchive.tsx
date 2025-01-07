@@ -238,7 +238,8 @@ const ProjectArchive: React.FC<{}> = () => {
                     colorText: "ghostwhite",
                     // colorTextDescription: "#d3d3d3",
                     colorTextDescription: "#afb2c4",
-                    fontSize: 18
+                    fontSize: 18,
+                    fontFamily: 'Trebuchet MS'
                 }, 
                 components: {
                     List: {
@@ -271,7 +272,7 @@ const ProjectArchive: React.FC<{}> = () => {
                             console.log(page);
                           },
                           pageSize: 3,
-                        }}    
+                        }}
                         dataSource={data}
                         renderItem={(item) => (
                             <List.Item

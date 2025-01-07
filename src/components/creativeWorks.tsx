@@ -101,7 +101,7 @@ const CreativeWorks: React.FC<{}> = () => {
                         <SubTitle>{`artwork`}</SubTitle>
                         <Paragraph>{`
                             A few of the artworks I've created. I've experimented with a variety of mediums,
-                            including  pecils, paint, ink, and digital art. I'm still working on my art skills, 
+                            including  pencils, paint, ink, and digital art. I'm still working on my art skills, 
                             but I enjoyed creating these!
                         `}
                         </Paragraph>
