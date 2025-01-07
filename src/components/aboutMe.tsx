@@ -41,7 +41,8 @@ const StyledAbout = styled.div`
 
     // // text-shadow: 2px 2px 1px black;
 
-    color: #d3d3d3;
+    // color: #d3d3d3;
+    color: #afb2c4;
 
     position: relative;
 
@@ -68,7 +69,7 @@ const AboutTitle = styled.div`
     
 `;
 const Paragraph = styled.div`
-    font-size: 20px;
+    font-size: 19px;
     // min-width: 600px;
     // padding: 0 10% 0 10%;
 
@@ -88,7 +89,7 @@ const Skills = styled.div`
 `;
 
 const StyledTag = styled(Tag)`
-    font-size: 20px;
+    font-size: 19px;
     color: white;
     background-color: #904e94;
     padding: 5px 10px 5px 10px;
@@ -98,7 +99,7 @@ const StyledTag = styled(Tag)`
 
 const AboutContent = styled.div`
     width: fit-content;
-    padding-top: 20px;
+    padding: 20px 15px 15px 15px;
 
     background-color: #3e207f;
     box-shadow: 0px 0px 0px 30px #3e207f,
@@ -109,6 +110,9 @@ const AboutContent = styled.div`
 `;
 
 const AboutMe: React.FC<{}> = () => {
+    const skillsArray = ['React', 'TypeScript', 'Python', 'Java', 'JavaScript',
+                        'ThreeJS', 'OpenGL', 'C++', 'C', 'HTML', 'CSS', 'SQL', 'PHP'
+    ]
     return (
         <StyledAbout id="aboutSection">
             <Fade fraction={0.1}cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
@@ -118,52 +122,35 @@ const AboutMe: React.FC<{}> = () => {
             <br />
             <AboutContent>
                 <Fade fraction={0.1}cascade damping={0.05}>
+                    <br />
                     <SubTitle>a small intro</SubTitle>
+                    {/* <br /> */}
                     <Paragraph>
                         {`
-                            My name is Tracy and I'm a 4th year Computer Science student at the University of British Columbia.
-                            I enjoy solving and creating, and while exploring my career paths during the beginning of
-                            univeristy, I found that developing was a way for me to pursue both of those interests!
-                            With that, this page will hold a bit of information about both of my technical and creative projects. 
-                            I also have an archive of all of my technical projects as a way to look back on my progress, and 
-                            have included a contact section if you would like to get in contact with me.
+                           I’m currently a 4th-year Computer Science student at the University of British Columbia.
+                            I enjoy problem solving and creating, and am actively developing my skills in software development and art.
+                             This page will feature my technical and creative projects, and highlight the ways in which I’ve brought these interests together.
                         `}
                     </Paragraph>
                     <br /> <br />
                     <SubTitle>a bit of my background</SubTitle>
                     <Paragraph>
-                    {/* {`
-                        I've previously worked as a Junior Quality Assurance Engineer and a Software Engineer Co-op, 
-                        and I expect to graduate May 2026. 
-                    `} */}
-                    {`
-                        I started uni in 2020 and joined the co-op program during my second year. I've previously worked two 8-month co-op placements. One as a Junior Quality Assurance Engineer, where I 
-                        focused on developing and running automated tests for regression and for new features. More recently I worked
-                        as a Software Engineer working on a fullstack web application at a smaller company. Here, I was given a wider variety of tasks, 
-                        and worked on implementing new features, fixing bugs, and test automation. Currently, I'm in school and focusing on my courses.
-                        I expect to graduate May 2026.
-                    `}
+                    {/* {` */}
+                        As part of UBC’c coop program, I’ve had the opportunity to gain valuable hand-on 
+                        experience in two placements. One as a <span style={{  color: 'white' }}>Junior QA Engineer</span> at Trulioo, where I
+                        focused on implementing automated end-to-end tests for the full-stack application.
+                        The second as a <span style={{  color: 'white' }}>Software Engineer</span> at Routific, where my focus shifted to developing
+                        new features and building reusable web components for a full-stack application.
+                    {/* `} */}
                     </Paragraph>
                     <br /> <br />
                     <SubTitle>skills</SubTitle>
                     <Skills>
-                        <StyledTag bordered={false}>React</StyledTag>
-                        <StyledTag bordered={false}>TypeScript</StyledTag>
-                        <StyledTag bordered={false}>Java</StyledTag>
-                        <StyledTag bordered={false}>JavaScript</StyledTag>
-                        <StyledTag bordered={false}>Node.js</StyledTag>
-                        <StyledTag bordered={false}>ThreeJS</StyledTag>
-                        <StyledTag bordered={false}>OpenGL</StyledTag>
-                        <StyledTag bordered={false}>C++</StyledTag>
-                        <StyledTag bordered={false}>C</StyledTag>
-                        <StyledTag bordered={false}>HTML</StyledTag>
-                        <StyledTag bordered={false}>CSS</StyledTag>
-                        {/* <StyledTag bordered={false}>Jest</StyledTag>
-                        <StyledTag bordered={false}>Mocha</StyledTag>
-                        <StyledTag bordered={false}>Chai</StyledTag>
-                        <StyledTag bordered={false}>JUnit</StyledTag> */}
-                        <StyledTag bordered={false}>SQL</StyledTag>
-                        <StyledTag bordered={false}>PHP</StyledTag>
+                        {
+                            skillsArray.map(skillName => (
+                                <StyledTag key={skillName} bordered={false}>{skillName}</StyledTag>
+                            ))
+                        }
                     </Skills>
                 </Fade>
             </AboutContent>

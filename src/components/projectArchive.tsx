@@ -24,10 +24,12 @@ const StyledArchive = styled.div`
 
 
 
-    color: #d3d3d3;
+    // color: #d3d3d3;
+    color: #afb2c4;
 
     .itemContent {
-        color: #d3d3d3;
+        // color: #d3d3d3;
+        color: #afb2c4;
         font-size: 16px;
     }
 
@@ -115,6 +117,12 @@ const ProjectArchive: React.FC<{}> = () => {
             imgSrc: './images/HarmonicHustle.png',
             description: 'Jan - April 2024',
             content: 'A rhythm game created for CPSC 427: Video Game Programming',
+            actions: [<a href="https://www.students.cs.ubc.ca/~cs-427/games" target="_blank" key="link">
+                <LinkOutlined style={{fontSize: "20px"}}/>
+                </a>,
+                <a href="https://www.youtube.com/watch?v=lfx6yT8nD4E" target="_blank" key = "link">
+                    <YoutubeOutlined style={{fontSize: "20px"}}/>
+                </a> ]
         },
         {
             title: `Atomic Design Project`,
@@ -123,6 +131,9 @@ const ProjectArchive: React.FC<{}> = () => {
             content: "A project created to explore components and the atomic design theory. Used Storybook to more easily visualize the components and the atomic design breakdown.",
             actions: [<a href="https://github.com/tc2780/atomic-design-project" target="_blank" key="test">
                         <GithubFilled style={{fontSize: "20px"}}/>
+                    </a>,
+                    <a href="https://66a0b018a87fee9c0eeb6910-zunbxxeink.chromatic.com/" target="_blank" key="link">
+                        <LinkOutlined style={{fontSize: "20px"}}/>
                     </a>]
         },
         {
@@ -225,7 +236,8 @@ const ProjectArchive: React.FC<{}> = () => {
             theme={{
                 token: {
                     colorText: "ghostwhite",
-                    colorTextDescription: "#d3d3d3",
+                    // colorTextDescription: "#d3d3d3",
+                    colorTextDescription: "#afb2c4",
                     fontSize: 18
                 }, 
                 components: {

@@ -79,22 +79,23 @@ export default function Home() {
         
       </Reveal>
       <FootNotes>
+        <br />
+        {`
+          Designed and Developed by Tracy Chow
+        `}
+        <br />
           {`
-            Designed and Developed by Tracy Chow
-          `}
-          <br />
-          {`
-            Copyright © 2024 Tracy Chow
+            Copyright © 2024-2025 Tracy Chow
           `}
           <br />
           <Button 
             ghost 
-            style={{border: "none"}}
+            style={{border: "none", paddingTop: '10px'}}
             href="https://github.com/tc2780/Personal-Website-v2"
             target="_blank"
             icon={<GithubFilled style={{fontSize: "25px", paddingTop: "5px"}} />}
           />
-        </FootNotes>
+      </FootNotes>
     </div>
   );
 }

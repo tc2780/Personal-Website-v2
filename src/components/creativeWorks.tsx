@@ -22,13 +22,14 @@ const StyledCreativeWorks = styled.div`
     // box-shadow: inset 18px 18px 14px -2px #1C0D44,
     //             12px 8px 0 0px black;
 
-    color: #d3d3d3;
+    // color: #d3d3d3;
+    color: #afb2c4;
 
     position: relative;
     // height: fit-content;
 
     .MuiImageListItemBar-title {
-        font-size: 20px;
+        font-size: 19px;
     }
     .MuiImageListItemBar-subtitle {
         font-size: 15px;
@@ -55,7 +56,7 @@ const CreativeTitle = styled.div`
 
 const CreativeContent = styled.div`
     width: fit-content;
-    padding-top: 20px;
+    padding: 20px 15px 15px 15px;
 
     background-color: #3e207f;
     box-shadow: 0px 0px 0px 30px #3e207f,
@@ -76,11 +77,11 @@ const SectionTitle = styled.div`
     font-size: 22px;
     font-style: italic;
     margin-bottom: 10px;
-    // color: ghostwhite;
+    color: ghostwhite;
 `;
 
 const Paragraph = styled.div`
-    font-size: 20px;
+    font-size: 19px;
     // min-width: 600px;
     // padding: 0 10% 0 10%;
 
@@ -92,180 +93,109 @@ const CreativeWorks: React.FC<{}> = () => {
             <Fade cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
                 <CreativeTitle id="creativeSection">creative works</CreativeTitle>
             </Fade>
-            <br />
-            <br />
+            <br /> <br />
             <Fade cascade damping={0.05} >
-            <CreativeContent>
-                <Fade fraction={0.1} cascade damping={0.05} >
-                    <SubTitle>{`artwork`}</SubTitle>
-                    <Paragraph>{`
-                        These are some artworks I've created. I started with traditional art, and over the past few years, I've also 
-                        started experimenting with digital art. I'm not the best, but I had a lot of fun creating these!
-                    `}
-                    </Paragraph>
-                </Fade>
-                <br />
-                <Image.PreviewGroup
-                    preview={{
-                    onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
-                    }}
-                >
-                
-                    <ImageList 
-                        variant="masonry" 
-                        cols={3} gap={12}>
-                        <Fade cascade damping={0.05} >
-                            <ImageListItem key={"tst"}>
-                                <Image src="./images/catHeader.png" alt="catHeader"/>
-                                <ImageListItemBar position="below" 
-                                    title={"tranquil cat"} 
-                                    subtitle={"used as the header for this site!"} />
-                            </ImageListItem>
-                            <ImageListItem key={"tst"}>
-                                <Image src="./images/caveGirl.jpeg" alt="caveGirl"/>
-                                <ImageListItemBar position="below"
-                                title={"girl in a cave"} 
-                                //  subtitle={"used as the header for this site!"} 
-                            />
-                            </ImageListItem>
-                            <ImageListItem key={"tst"}>
-                                <Image src="./images/sleepyCat.jpg" alt="sleepyCat"/>
-                                    <ImageListItemBar position="below"
-                                    title={"sleepy cat"} 
-                                    //  subtitle={"used as the header for this site!"} 
-                                />
-                            </ImageListItem>
-                            <ImageListItem key={"tst"}>
-                                <Image src="./images/hawaii.jpg" alt="hawaii"/>
-                                <ImageListItemBar position="below"
-                                title={"hawaii"} 
-                                //  subtitle={"used as the header for this site!"} 
-                                />
-                            </ImageListItem>
-                            <ImageListItem key={"tst"}>
-                                <Image src="./images/justALight.JPG" alt="light"/>
-                                <ImageListItemBar position="below"
-                                title={"just a light"} 
-                                //  subtitle={"used as the header for this site!"} 
-                                />
-                            </ImageListItem>
-                            
-                        </Fade>
-                    </ImageList>
-                    </Image.PreviewGroup>
-                <br />
-                <Fade cascade fraction={0.1} damping={0.05} >
-                <SubTitle>{`animations`}</SubTitle>
-                <Paragraph>{`
-                    I have some (very) short animations I've done in the past few years. One I did as a capstone project in my last year of high school, 
-                    and also includes some of the concept art I had drawn up for it. The other is technically also considered a technical project
-                    as I implemented it with Three.js and OpenGL for an assignment. But I wanted to bring focus to the animations I 
-                    did for it and decided to put it in this section as well.
-                `}</Paragraph>
-                <br /><br />
-                <SectionTitle>cat animation</SectionTitle>
-                </Fade>
-                <ImageList 
-                    // variant="masonry" 
-                    cols={3} gap={12}>
-                    <Fade cascade fraction={0.1} damping={0.05} >       
-                        <ImageListItem key={"tst"}>
-                        
-                            {/* <Image src="./images/catAnimation.jpg"
-                                alt="catAnimation"
-                                preview={{
-                                    imageRender: () => (
-                                      <YouTube 
-                                        videoId="kov8PXBQOxk"
-                                        style={{height:"1000"}}
-                                      />
-                                    ),
-                                    toolbarRender: () => null,
-                                }}
-                            /> */}
-                            <YouTube videoId="kov8PXBQOxk"/>
-                            <ImageListItemBar position="below"
-                            //  title={"watch video"} 
-                            //  subtitle={"used as the header for this site!"} 
-                        />
-                        </ImageListItem>
+                <CreativeContent>
+                    <Fade fraction={0.1} cascade damping={0.05} >
+                        <br />
+                        <SubTitle>{`artwork`}</SubTitle>
+                        <Paragraph>{`
+                            A few of the artworks I've created. I've experimented with a variety of mediums,
+                            including  pecils, paint, ink, and digital art. I'm still working on my art skills, 
+                            but I enjoyed creating these!
+                        `}
+                        </Paragraph>
                     </Fade>
-                </ImageList>
-                <br />
-                <Fade cascade fraction={0.1} damping={0.05} >
-                    <SectionTitle>marble animation</SectionTitle>
-                </Fade>
-                <Image.PreviewGroup
-                    preview={{
-                    onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
-                    }}
-                >
-                <ImageList 
-                    variant="masonry" 
-                    cols={3} gap={12}>
-                <Fade cascade fraction={0.1} damping={0.05} >
-                        <ImageListItem key={"tst"}>
-                                <Image src="./images/blueConcept.JPG" alt="test"/>
-                                <ImageListItemBar position="below"
-                                title={"blue marble concept art"} 
-                                //  subtitle={"used as the header for this site!"} 
-                                />
-                        </ImageListItem>
-                        <ImageListItem key={"tst"}>
-                                <Image src="./images/purpleConcept.JPG" alt="test"/>
-                                <ImageListItemBar position="below"
-                                title={"purple marble concept art"} 
-                                //  subtitle={"used as the header for this site!"} 
-                                />
-                        </ImageListItem>
-                        <ImageListItem key={"tst"}>
-                            <Image src="./images/blueStyled.JPG" alt="test"/>
-                            <ImageListItemBar position="below"
-                             title={"blue in chosen art style"} 
-                            //  subtitle={"used as the header for this site!"} 
-                            />
-                        </ImageListItem>
-                        <ImageListItem key={"tst"}>
-                            <Image src="./images/purpleStyled.JPG" alt="test"/>
-                            <ImageListItemBar position="below"
-                             title={"purple in chosen art style"} 
-                            //  subtitle={"used as the header for this site!"} 
-                            />
-                        </ImageListItem>
-                        {/* <ImageListItem key={"tst"}>
-                        <YouTube 
-                                        videoId="500GanMZ2O0"
-                                        style={{height:"1000"}}
-                                      />
-                            <ImageListItemBar position="below"
-                             title={"watch video"} 
-                            //  subtitle={"used as the header for this site!"} 
-                        />
-                        </ImageListItem> */}
-                        {/* <ImageListItem key={"tst"}>
-                            <Image src="./images/catAnimation.jpg"
-                                alt="marbleAnimation"
-                                preview={{
-                                    imageRender: () => (
-                                      <YouTube 
-                                        videoId="500GanMZ2O0"
-                                        style={{height:"1000"}}
-                                      />
-                                    ),
-                                    toolbarRender: () => null,
-                                }}
-                            />
-                            <ImageListItemBar position="below"
-                             title={"watch video"} 
-                            //  subtitle={"used as the header for this site!"} 
-                        />
-                        </ImageListItem> */}
-                        </Fade>
-                    </ImageList>
+                    <br />
+                    <Image.PreviewGroup
+                        preview={{
+                        onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
+                        }}
+                    >
+                        <ImageList 
+                            variant="masonry" 
+                            cols={3} gap={12}>
+                                <Fade cascade damping={0.05} >
+
+                                    <ImageListItem key={"catHeader"}>
+                                        <Image src="./images/catHeader.png" alt="catHeader"/>
+                                        <ImageListItemBar position="below" 
+                                            title={"just a cat"} 
+                                            subtitle={"used as the header for this site!"} />
+                                    </ImageListItem>
+
+                                    <ImageListItem key={"caveGirl"}>
+                                        <Image src="./images/caveGirl.jpeg" alt="caveGirl"/>
+                                        <ImageListItemBar position="below" title={"girl in a cave"}/>
+                                    </ImageListItem>
+
+                                    <ImageListItem key={"sleepyCat"}>
+                                        <Image src="./images/sleepyCat.jpg" alt="sleepyCat"/>
+                                        <ImageListItemBar position="below" title={"sleepy cat"}/>
+                                    </ImageListItem>
+
+                                    <ImageListItem key={"hawaii"}>
+                                        <Image src="./images/hawaii.jpg" alt="hawaii"/>
+                                        <ImageListItemBar position="below" title={"trees"}/>
+                                    </ImageListItem>
+
+                                    <ImageListItem key={"aLight"}>
+                                        <Image src="./images/justALight.JPG" alt="light"/>
+                                        <ImageListItemBar position="below" title={"just a light"} />
+                                    </ImageListItem>
+
+                                </Fade>
+                        </ImageList>
                     </Image.PreviewGroup>
+
+                    <br />
+                    
+                    <Fade cascade fraction={0.1} damping={0.05} >
+                        <SubTitle>{`animations`}</SubTitle>
+                        <Paragraph>{`
+                            I'm also interested in animation, and have experimented with creating a few short animations.
+                            One below I created for a high school capstone project, and includes some of the concept art I had.
+                            More recently as I've pursued my degree, I started learning ThreeJS and OpenGL, and have
+                            included below a short demo video of an assignment I had for CPSC 314: Computer Graphics. Where
+                            I focused on creating fluid and realistic movements through code.
+                        `}</Paragraph>
+                        <br />
+                    </Fade>
+                            
+                    <Fade cascade fraction={0.1} damping={0.05} >
+                        <SectionTitle>marble animation</SectionTitle>
+                    </Fade>
+
+                    <Image.PreviewGroup
+                        preview={{
+                            onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
+                            }}
+                        >
+                        <ImageList variant="masonry" cols={3} gap={12}>
+                            <Fade cascade fraction={0.1} damping={0.05} >
+                                <ImageListItem key={"blueConcept"}>
+                                    <Image src="./images/blueConcept.JPG" alt="blueConcept"/>
+                                    <ImageListItemBar position="below" title={"blue marble concept art"} />
+                                </ImageListItem>
+                                <ImageListItem key={"purpleConcept"}>
+                                    <Image src="./images/purpleConcept.JPG" alt="purpleConcept"/>
+                                    <ImageListItemBar position="below" title={"purple marble concept art"} />
+                                </ImageListItem>
+                                <ImageListItem key={"blueMarble"}>
+                                    <Image src="./images/blueStyled.JPG" alt="blueMarble"/>
+                                    <ImageListItemBar position="below" title={"blue in chosen art style"} />
+                                </ImageListItem>
+                                <ImageListItem key={"purpleMarble"}>
+                                    <Image src="./images/purpleStyled.JPG" alt="purpleMarble"/>
+                                    <ImageListItemBar position="below" title={"purple in chosen art style"} />
+                                </ImageListItem>
+                            </Fade>
+                        </ImageList>
+                    </Image.PreviewGroup>
+
                     <ImageList style={{paddingTop: "30px"}}>
                         <Fade damping={0.05} >
-                        <ImageListItem>
+                        <ImageListItem key={'marble-animation-full-video'}>
                             <YouTube videoId="500GanMZ2O0" />
                             <ImageListItemBar position="below"
                                 title={"full video"} 
@@ -273,7 +203,25 @@ const CreativeWorks: React.FC<{}> = () => {
                         </ImageListItem>
                         </Fade>
                     </ImageList>
-            </CreativeContent>
+
+                    <br />
+
+                    <Fade>
+                        <SectionTitle>cat animation</SectionTitle>
+                    </Fade>
+
+                    <ImageList cols={3} gap={12}>
+                        <Fade cascade fraction={0.1} damping={0.05} >       
+                            <ImageListItem key={"cat-demo"}>
+                                <YouTube videoId="kov8PXBQOxk"/>
+                                <ImageListItemBar position="below"
+                                title={"implemented with OpenGL and JavaScript"} 
+                                />
+                            </ImageListItem>
+                        </Fade>
+                    </ImageList>
+
+                </CreativeContent>
             </Fade>
         </StyledCreativeWorks>
     )

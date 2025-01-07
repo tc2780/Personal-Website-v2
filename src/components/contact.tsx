@@ -16,7 +16,8 @@ const StyledContact = styled.div`
     padding: 4% 4% 4% 4%;
     margin-top: 50px;
 
-    color: #d3d3d3;
+    // color: #d3d3d3;
+    color: #afb2c4;
 
     position: relative;
 
@@ -41,7 +42,7 @@ const ContactTitle = styled.div`
 
 const ContactContent = styled.div`
     width: fit-content;
-    padding-top: 20px;
+    padding: 20px 15px 15px 15px;
 
     background-color: #3e207f;
     box-shadow: 0px 0px 0px 30px #3e207f,
@@ -160,7 +161,7 @@ const ContactMe: React.FC<{}> = () => {
                 <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 48]}>
                     <Col>
                         <SubTitle>
-                            Please feel free to contact me!
+                            {'Please feel free to contact me - I’d love to connect!'}
                         </SubTitle>
                         <Link>
                             <a href="https://www.linkedin.com/in/tracy-chow-6bab40189/" target="_blank">
@@ -193,9 +194,8 @@ const ContactMe: React.FC<{}> = () => {
                             <Form.Item
                                  name="title">
                                     <p>{`
-                                        Or fill out this form to leave a message and I'll get back to you as soon as possible!
-                                        `}
-                                        </p>
+                                        Or, send a message with the form below, and I’ll get back to you as soon as possible!                                        `}
+                                    </p>
                             </Form.Item>
                             <Form.Item label="Name: " name="name">
                                 <Input />
