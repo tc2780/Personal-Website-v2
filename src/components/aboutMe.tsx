@@ -41,7 +41,8 @@ const StyledAbout = styled.div`
 
     // // text-shadow: 2px 2px 1px black;
 
-    color: #d3d3d3;
+    // color: #d3d3d3;
+    color: #afb2c4;
 
     position: relative;
 
@@ -68,7 +69,7 @@ const AboutTitle = styled.div`
     
 `;
 const Paragraph = styled.div`
-    font-size: 20px;
+    font-size: 19px;
     // min-width: 600px;
     // padding: 0 10% 0 10%;
 
@@ -88,7 +89,7 @@ const Skills = styled.div`
 `;
 
 const StyledTag = styled(Tag)`
-    font-size: 20px;
+    font-size: 19px;
     color: white;
     background-color: #904e94;
     padding: 5px 10px 5px 10px;
@@ -98,7 +99,7 @@ const StyledTag = styled(Tag)`
 
 const AboutContent = styled.div`
     width: fit-content;
-    padding-top: 20px;
+    padding: 20px 15px 15px 15px;
 
     background-color: #3e207f;
     box-shadow: 0px 0px 0px 30px #3e207f,
@@ -109,6 +110,9 @@ const AboutContent = styled.div`
 `;
 
 const AboutMe: React.FC<{}> = () => {
+    const skillsArray = ['React', 'TypeScript', 'Python', 'Java', 'JavaScript',
+                        'ThreeJS', 'OpenGL', 'C++', 'C', 'HTML', 'CSS', 'SQL', 'PHP'
+    ]
     return (
         <StyledAbout id="aboutSection">
             <Fade fraction={0.1}cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
@@ -118,42 +122,35 @@ const AboutMe: React.FC<{}> = () => {
             <br />
             <AboutContent>
                 <Fade fraction={0.1}cascade damping={0.05}>
-                    {/* <SubTitle>a small intro</SubTitle> */}
                     <br />
+                    <SubTitle>a small intro</SubTitle>
+                    {/* <br /> */}
                     <Paragraph>
                         {`
-                            My name is Tracy and I’m currently a 4th year Computer Science student at the University of British Columbia.
-                            I enjoy problem solving as well as creating. Exploring and developing my skills in both software development and art.
-                            This page will feature technical and creative projects I’ve worked on.
+                           I’m currently a 4th-year Computer Science student at the University of British Columbia.
+                            I enjoy problem solving and creating, and am actively developing my skills in software development and art.
+                             This page will feature my technical and creative projects, and highlight the ways in which I’ve brought these interests together.
                         `}
                     </Paragraph>
-                    <br />
-                    {/* <br /> */}
-                    {/* <SubTitle>a bit of my background</SubTitle> */}
+                    <br /> <br />
+                    <SubTitle>a bit of my background</SubTitle>
                     <Paragraph>
-                    {`
-                        As a 4th year CS student in the co-op program,
-                        I’ve gained a solid foundation of skills applicable to software development,
-                        and have worked in a variety of independent and team settings.
-                        My expected graduation is April 2026.
-                    `}
+                    {/* {` */}
+                        As part of UBC’c coop program, I’ve had the opportunity to gain valuable hand-on 
+                        experience in two placements. One as a <span style={{  color: 'white' }}>Junior QA Engineer</span> at Trulioo, where I
+                        focused on implementing automated end-to-end tests for the full-stack application.
+                        The second as a <span style={{  color: 'white' }}>Software Engineer</span> at Routific, where my focus shifted to developing
+                        new features and building reusable web components for a full-stack application.
+                    {/* `} */}
                     </Paragraph>
                     <br /> <br />
                     <SubTitle>skills</SubTitle>
                     <Skills>
-                        <StyledTag bordered={false}>React</StyledTag>
-                        <StyledTag bordered={false}>TypeScript</StyledTag>
-                        <StyledTag bordered={false}>Python</StyledTag>
-                        <StyledTag bordered={false}>Java</StyledTag>
-                        <StyledTag bordered={false}>JavaScript</StyledTag>
-                        <StyledTag bordered={false}>ThreeJS</StyledTag>
-                        <StyledTag bordered={false}>OpenGL</StyledTag>
-                        <StyledTag bordered={false}>C++</StyledTag>
-                        <StyledTag bordered={false}>C</StyledTag>
-                        <StyledTag bordered={false}>HTML</StyledTag>
-                        <StyledTag bordered={false}>CSS</StyledTag>
-                        <StyledTag bordered={false}>SQL</StyledTag>
-                        <StyledTag bordered={false}>PHP</StyledTag>
+                        {
+                            skillsArray.map(skillName => (
+                                <StyledTag key={skillName} bordered={false}>{skillName}</StyledTag>
+                            ))
+                        }
                     </Skills>
                 </Fade>
             </AboutContent>

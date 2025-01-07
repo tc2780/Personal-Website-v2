@@ -23,7 +23,8 @@ const SyledFeatured = styled.div`
     //             12px 8px 0 0px black;
 
 
-    color: #d3d3d3;
+    // color: #d3d3d3;
+    color: #afb2c4;
     // background-color: #2F1B5B;
 
     // transform: translate(0, 100px);
@@ -96,7 +97,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                                         {/* <div> */}
                                         <img alt="Harmonic Hustle" src="/images/HarmonicHustle-updated.png" />
                                         {/* </div>
-                                        <div>
+                                        <div> 
                                         <img alt="Harmonic Hustle" src="/images/HarmonicHustleBattle.png" />
                                         </div> */}
                                     </Carousel>
@@ -110,12 +111,13 @@ const FeaturedProjects: React.FC<{}> = () => {
                                 `}
                                 tags={["C++", "OpenGL", "C"]}
                                 actions={[
-                                    <a href="https://www.students.cs.ubc.ca/~cs-427/games" target="_blank" key = "link">
-                                        <LinkOutlined style={{fontSize: "30px"}}/>
-                                    </a>,
-                                    <a href="https://www.youtube.com/watch?v=lfx6yT8nD4E" target="_blank" key = "link">
+                                    <Tooltip title="Featured on CPSC 427 Page" key="tooltip">
+                                        <a href="https://www.students.cs.ubc.ca/~cs-427/games" target="_blank" key = "link">
+                                            <LinkOutlined style={{fontSize: "30px"}}/>
+                                        </a></Tooltip>,
+                                    <Tooltip title="Gameplay Trailer" key="tooltip"><a href="https://www.youtube.com/watch?v=lfx6yT8nD4E" target="_blank" key = "link">
                                        <YoutubeOutlined style={{fontSize: "30px"}}/>
-                                    </a>
+                                    </a></Tooltip>
                             
                                 ]}
                                 />
@@ -132,12 +134,17 @@ const FeaturedProjects: React.FC<{}> = () => {
                                     new to atomic design. I used Storybook to help organize the different 
                                     components and parts more easily.
                                 `}
-                                tags={["HTML", "CSS", "React", "TypeScript"]}
+                                tags={["HTML", "CSS", "React", "TypeScript", "AntD", "Storybook", "Chromatic"]}
                                 actions={[
-                                    // <div key="setting" >test </div>,
+                                    
                                     <a href="https://github.com/tc2780/atomic-design-project" target="_blank" key = "link">
                                         <GithubOutlined style={{fontSize: "30px"}}/>
-                                    </a>
+                                    </a>,
+                                    <Tooltip title="Storybook build" key="tooltip">
+                                        <a href="https://66a0b018a87fee9c0eeb6910-zunbxxeink.chromatic.com/" target="_blank" key="link">
+                                            <LinkOutlined style={{fontSize: "30px"}}/>
+                                        </a>
+                                    </Tooltip>
                                         
                                 ]}
                             />
@@ -159,7 +166,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                                 `}
                                 tags={["TypeScript", "HTML", "CSS", "JavaScript", "Node.js", "Mocha", "Chai"]}
                                 actions={[
-                                    <Tooltip title="Video Demo" key = "link">
+                                    <Tooltip title="Demo Video" key = "link">
                                         <a href="https://youtu.be/dd42775Kg0E" target="_blank">
                                             <YoutubeOutlined style={{fontSize: "30px"}}/>
                                         </a>
