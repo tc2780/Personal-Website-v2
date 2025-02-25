@@ -4,29 +4,19 @@ import { Affix, Anchor, Button, ConfigProvider } from "antd";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from 'styled-components';
 
-// export interface NavProps {
-//     atTop: Boolean
-//     setAtTop: function() = {};
-    
-// };
-
 export interface NavProps {
-    atTop: boolean;
+    $atTop: boolean;
 }
 const StyledNav = styled.div<NavProps>`
 
     padding: 15px;
     font-size: 22px;
-    // background-color: red;
-    // opacity: 50%;
-    // position: relative;
-    // top: 0;
     position: fixed;
     top: 0;
     z-index: 1000;
     width: 100%;
 
-    background-color: ${({atTop}) => atTop ? "none" : "black"};
+    background-color: ${({$atTop}) => $atTop ? "none" : "black"};
     transform: background-color 500ms linear;
 
     display: flex;
@@ -44,7 +34,7 @@ const StyledAnchor = styled(Anchor)`
 const NavBar: React.FC<{}> = () => {
     const [atTop, setAtTop] = useState(true);
     const vh = window.innerHeight;
-    // useEffect(() => {
+    useEffect(() => {
         const listenScrollEvent = (event: any) => {
             if (document.documentElement.scrollTop > (vh)) {
                 setAtTop(false);
@@ -53,8 +43,8 @@ const NavBar: React.FC<{}> = () => {
             }
         }
         window.addEventListener("scroll", listenScrollEvent);
+    }, []);
 
-        
     return (
         <ConfigProvider
             theme={{
@@ -69,7 +59,7 @@ const NavBar: React.FC<{}> = () => {
                 },
             }}
         >
-            <StyledNav atTop={atTop}>
+            <StyledNav $atTop={atTop}>
                 <StyledAnchor
                         direction="horizontal"
                         items={[

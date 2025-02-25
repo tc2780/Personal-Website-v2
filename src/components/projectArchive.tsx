@@ -104,17 +104,26 @@ const ArchivedDescription = styled.div`
 const ProjectArchive: React.FC<{}> = () => {
       const data = [
         {
+            title: `Predicting Credit Card Fraud`,
+            imgSrc: './images/creditCardFraudBlogPost.png',
+            description: 'Dec 2024',
+            content: 'A blogpost written about a project for CPSC 330: Applied Machine Learning, talking through the steps done to train different ML models.',
+            actions: [<a href="https://tc2780.notion.site/Predicting-Credit-Card-Payments-15270b6252e58068826cfa40bb870d65?pvs=4" target="_blank" key="test">
+                        <LinkOutlined style={{fontSize: "20px"}}/>
+                    </a>]
+        },
+        {
             title: `Personal Website V2 (this site!)`,
             imgSrc: './images/websiteV2.png',
             description: 'March 2024 - Current',
-            content: 'The second iteration of my personal site. Created with React, TypeScript and hosted on Netlify.',
+            content: 'The second iteration of my personal site. Created with React, TypeScript and hosted on Netlify. Currently working through bugs and implementing responsive web design.',
             actions: [<a href="https://github.com/tc2780/Personal-Website-v2" target="_blank" key="test">
                         <GithubFilled style={{fontSize: "20px"}}/>
                     </a>]
         },
         {
             title: `Harmonic Hustle`,
-            imgSrc: './images/HarmonicHustle.png',
+            imgSrc: './images/HarmonicHustle-updated.png',
             description: 'Jan - April 2024',
             content: 'A rhythm game created for CPSC 427: Video Game Programming',
             actions: [<a href="https://www.students.cs.ubc.ca/~cs-427/games" target="_blank" key="link">
