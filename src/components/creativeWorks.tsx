@@ -124,9 +124,9 @@ const CreativeWorks: React.FC<{}> = () => {
                                             subtitle={"used as the header for this site!"} />
                                     </ImageListItem>
 
-                                    <ImageListItem key={"caveGirl"}>
-                                        <Image src="./images/caveGirl.jpeg" alt="caveGirl"/>
-                                        <ImageListItemBar position="below" title={"girl in a cave"}/>
+                                    <ImageListItem key={"shark"}>
+                                        <Image src="./images/shark.jpg" alt="shark"/>
+                                        <ImageListItemBar position="below" title={"shark"} />
                                     </ImageListItem>
 
                                     <ImageListItem key={"sleepyCat"}>
@@ -142,6 +142,11 @@ const CreativeWorks: React.FC<{}> = () => {
                                     <ImageListItem key={"aLight"}>
                                         <Image src="./images/justALight.JPG" alt="light"/>
                                         <ImageListItemBar position="below" title={"just a light"} />
+                                    </ImageListItem>
+
+                                    <ImageListItem key={"caveGirl"}>
+                                        <Image src="./images/caveGirl.jpeg" alt="caveGirl"/>
+                                        <ImageListItemBar position="below" title={"girl in a cave"}/>
                                     </ImageListItem>
 
                                 </Fade>

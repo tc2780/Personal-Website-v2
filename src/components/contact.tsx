@@ -79,6 +79,7 @@ const StyledSpin = styled(Spin)`
 const ContactMe: React.FC<{}> = () => {
 
     const [isLoading, setIsLoading] = useState(false)
+    const [messageApi, contextHolder] = message.useMessage();
 
     // https://joeczubiak.com/netlify-contact-form-with-react-ant-design/
     function encode(data: { [x: string]: string | number | boolean; }) {
@@ -88,8 +89,12 @@ const ContactMe: React.FC<{}> = () => {
     }
     const showSuccess = () => {
         // TODO: Show a success message or navigate to a success page.
-        message.success({
-            content: 'Message sent! Thank you :)'
+        messageApi.open({
+            type: 'success',
+            content: 'Message sent! Thank you :)',
+            style: {
+                color: 'black',
+            }
         })
         console.log(`form submitted successfully`);
     }
@@ -98,8 +103,12 @@ const ContactMe: React.FC<{}> = () => {
         // TODO: Show an error message to the user
         console.log(`There was an error submitting the form`)
         console.log(error)
-        message.error({
-            content: "Message couldn't send :( Could you please try again?"
+        messageApi.open({
+            type: 'error',
+            content: "Message couldn't send :( Could you please try again?",
+            style: {
+                color: 'black',
+            }
         })
     }
     const handleSubmit = async (values: any) => {
@@ -113,7 +122,7 @@ const ContactMe: React.FC<{}> = () => {
                     ...values,
                 }),
             })
-            if (res.status == 200) {
+            if (res.ok) {
                 showSuccess()
             } else {
                 showError("Failed to send: " + res.status + res.statusText)
@@ -151,6 +160,7 @@ const ContactMe: React.FC<{}> = () => {
         }}
         >
         <StyledContact>
+            {contextHolder}
             <Fade cascade damping={0.05} style={{zIndex:"9999", position: "relative"}}>
                 <ContactTitle id="contactSection">contact me</ContactTitle>
             </Fade>
