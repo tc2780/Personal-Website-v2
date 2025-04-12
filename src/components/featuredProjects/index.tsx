@@ -88,7 +88,33 @@ const FeaturedProjects: React.FC<{}> = () => {
                 </Fade>
                 <Cards>
                     <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 16]}>
-                    <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
+                        <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
+                            <Card 
+                                title = {"Analyzing Steam Games"}
+                                dates={"Jan - April 2025"}
+                                cover={
+                                    <img alt="Analyzing Steam Games" src="/images/analyzingSteamGames.png" />
+                                }
+                                description = {`
+                                    A project created for the CPSC 447: Intro to Visualization course at UBC.
+                                    We worked as a team of 4 to design and implement a dashboard to allow users to explore
+                                    and analyze the top owned games in Steam. Implemented views explore game difficulties, playtimes, release year, game genres,
+                                    and available languages. All charts are implemented using D3, and are interactive.
+                                `}
+                                tags={["D3", "JavaScript", "HTML", "CSS", "Bootstrap"]}
+                                actions={[
+                                    <Tooltip title="GitHub Repo" key="tooltip">
+                                        <a href="https://github.com/tc2780/Analyzing-Steam-Games" target="_blank" key = "link">
+                                            <GithubOutlined style={{fontSize: "30px"}}/>
+                                        </a></Tooltip>,
+                                    <Tooltip title="Hosted on Vercel" key="tooltip"><a href="https://analyzing-steam-games.vercel.app/" target="_blank" key = "link">
+                                        <LinkOutlined style={{fontSize: "30px"}}/>
+                                    </a></Tooltip>
+                            
+                                ]}
+                                />
+                        </Col>
+                        <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
                                 title = {"Harmonic Hustle"}
                                 dates={"Jan - April 2024"}
@@ -122,6 +148,8 @@ const FeaturedProjects: React.FC<{}> = () => {
                                 ]}
                                 />
                         </Col>
+                    </Row>
+                    <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 16]}>
                         <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
                                 title={"Atomic Design Project"}
@@ -136,10 +164,10 @@ const FeaturedProjects: React.FC<{}> = () => {
                                 `}
                                 tags={["HTML", "CSS", "React", "TypeScript", "AntD", "Storybook", "Chromatic"]}
                                 actions={[
-                                    
+                                    <Tooltip title="GitHub Repo" key="tooltip">
                                     <a href="https://github.com/tc2780/atomic-design-project" target="_blank" key = "link">
                                         <GithubOutlined style={{fontSize: "30px"}}/>
-                                    </a>,
+                                    </a></Tooltip>,
                                     <Tooltip title="Storybook build" key="tooltip">
                                         <a href="https://66a0b018a87fee9c0eeb6910-zunbxxeink.chromatic.com/" target="_blank" key="link">
                                             <LinkOutlined style={{fontSize: "30px"}}/>
@@ -149,9 +177,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                                 ]}
                             />
                         </Col>
-                    </Row>
                     
-                    <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 16]}>
                         <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
                                 title="Insight UBC"
@@ -176,7 +202,8 @@ const FeaturedProjects: React.FC<{}> = () => {
                             />
                             
                         </Col>
-                        <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
+                    </Row>
+                        {/* <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Card 
                                 title="SOUUP: A Mental Health Check-In Site"
                                 dates={"March 2022"}
@@ -203,8 +230,7 @@ const FeaturedProjects: React.FC<{}> = () => {
                                         
                                 ]}
                             />
-                        </Col>
-                    </Row>
+                        </Col> */}
                     {/* <Row gutter={[{ xs: 8, sm: 48, md: 48, lg: 48 }, 16]}>
                         <Col span={12} xs={24} sm={24} md={24} lg={12} xl={12}>
                             <Fade fraction={0.1}cascade damping={0.05}>
