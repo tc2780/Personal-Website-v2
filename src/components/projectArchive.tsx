@@ -104,6 +104,18 @@ const ArchivedDescription = styled.div`
 const ProjectArchive: React.FC<{}> = () => {
       const data = [
         {
+            title: `Analyzing Steam Games`,
+            imgSrc: './images/analyzingSteamGames.png',
+            description: 'Jan - April 2025',
+            content: 'A project created for CPSC 447: Intro to Visualization. A dashboard visualization designed to explore and anaylyze the top owned games on Steam.',
+            actions: [<a href="https://github.com/tc2780/Analyzing-Steam-Games" target="_blank" key="github">
+                            <GithubFilled style={{fontSize: "20px"}}/>
+                        </a>,
+                        <a href="https://analyzing-steam-games.vercel.app/" target="_blank" key="site">
+                        <LinkOutlined style={{fontSize: "20px"}}/>
+                        </a>]
+        },
+        {
             title: `Predicting Credit Card Fraud`,
             imgSrc: './images/creditCardFraudBlogPost.png',
             description: 'Dec 2024',
