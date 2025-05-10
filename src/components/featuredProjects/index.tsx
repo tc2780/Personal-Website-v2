@@ -1,5 +1,5 @@
 'use client'
-import { GithubOutlined, InfoCircleOutlined, LinkOutlined, YoutubeOutlined } from "@ant-design/icons";
+import { GithubOutlined, InfoCircleOutlined, LinkOutlined, TrophyOutlined, YoutubeOutlined } from "@ant-design/icons";
 import { Carousel, Col, Row, Tooltip } from "antd";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
@@ -99,17 +99,25 @@ const FeaturedProjects: React.FC<{}> = () => {
                                     A project created for the CPSC 447: Intro to Visualization course at UBC.
                                     We worked as a team of 4 to design and implement a dashboard to allow users to explore
                                     and analyze the top owned games in Steam. Implemented views explore game difficulties, playtimes, release year, game genres,
-                                    and available languages. All charts are implemented using D3, and are interactive.
+                                    and available languages. All charts are implemented using D3, and are interactive. Selected as one of the best projects of Spring 2025!
                                 `}
                                 tags={["D3", "JavaScript", "HTML", "CSS", "Bootstrap"]}
                                 actions={[
                                     <Tooltip title="GitHub Repo" key="tooltip">
                                         <a href="https://github.com/tc2780/Analyzing-Steam-Games" target="_blank" key = "link">
                                             <GithubOutlined style={{fontSize: "30px"}}/>
-                                        </a></Tooltip>,
-                                    <Tooltip title="Hosted on Vercel" key="tooltip"><a href="https://analyzing-steam-games.vercel.app/" target="_blank" key = "link">
-                                        <LinkOutlined style={{fontSize: "30px"}}/>
-                                    </a></Tooltip>
+                                        </a>
+                                    </Tooltip>,
+                                    <Tooltip title="Featured on 447 Hall of Fame" key="tooltip">
+                                        <a href="https://www.students.cs.ubc.ca/~cs-447/25Jan/fame/" target="_blank" key = "link">
+                                            <TrophyOutlined style={{fontSize: "30px"}}/>
+                                        </a>
+                                    </Tooltip>,
+                                    <Tooltip title="Hosted on Vercel" key="tooltip">
+                                        <a href="https://analyzing-steam-games.vercel.app/" target="_blank" key = "link">
+                                            <LinkOutlined style={{fontSize: "30px"}}/>
+                                        </a>
+                                    </Tooltip>
                             
                                 ]}
                                 />

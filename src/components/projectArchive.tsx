@@ -1,5 +1,5 @@
 'use client'
-import { GithubFilled, LinkOutlined, YoutubeFilled, YoutubeOutlined } from "@ant-design/icons";
+import { GithubFilled, LinkOutlined, TrophyOutlined, YoutubeFilled, YoutubeOutlined } from "@ant-design/icons";
 import { ConfigProvider, Image, List } from "antd";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
@@ -107,12 +107,15 @@ const ProjectArchive: React.FC<{}> = () => {
             title: `Analyzing Steam Games`,
             imgSrc: './images/analyzingSteamGames.png',
             description: 'Jan - April 2025',
-            content: 'A project created for CPSC 447: Intro to Visualization. A dashboard visualization designed to explore and anaylyze the top owned games on Steam.',
+            content: 'A project created for CPSC 447: Intro to Visualization. A dashboard visualization designed to explore and anaylyze the top owned games on Steam. Featured on 447 Hall of Fame.',
             actions: [<a href="https://github.com/tc2780/Analyzing-Steam-Games" target="_blank" key="github">
                             <GithubFilled style={{fontSize: "20px"}}/>
                         </a>,
                         <a href="https://analyzing-steam-games.vercel.app/" target="_blank" key="site">
-                        <LinkOutlined style={{fontSize: "20px"}}/>
+                            <LinkOutlined style={{fontSize: "20px"}}/>
+                        </a>,
+                        <a href="https://www.students.cs.ubc.ca/~cs-447/25Jan/fame/" target="_blank" key="site">
+                            <TrophyOutlined style={{fontSize: "20px"}}/>
                         </a>]
         },
         {
@@ -209,7 +212,7 @@ const ProjectArchive: React.FC<{}> = () => {
                     <GithubFilled style={{fontSize: "20px"}}/>
                 </a>,
                 <a href="https://devpost.com/software/sooup" target="_blank" key="test2">
-                    <LinkOutlined style={{fontSize: "20px"}}/>
+                    <TrophyOutlined style={{fontSize: "20px"}}/>
                 </a>
             ]
         },
