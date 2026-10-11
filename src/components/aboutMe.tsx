@@ -110,8 +110,8 @@ const AboutContent = styled.div`
 `;
 
 const AboutMe: React.FC<{}> = () => {
-    const skillsArray = ['React', 'TypeScript', 'Python', 'Java', 'JavaScript',
-                        'ThreeJS', 'OpenGL', 'C++', 'C', 'HTML', 'CSS', 'SQL', 'PHP'
+    const skillsArray = ['React', 'TypeScript', 'Python', 'SQL', 'Java', 'JavaScript',
+                        'ThreeJS', 'OpenGL', 'C++', 'C', 'HTML', 'CSS', 'PHP'
     ]
     return (
         <StyledAbout id="aboutSection">
@@ -127,9 +127,10 @@ const AboutMe: React.FC<{}> = () => {
                     {/* <br /> */}
                     <Paragraph>
                         {`
-                           I’m currently a 4th-year Computer Science student at the University of British Columbia.
-                            I enjoy problem solving and creating, and am actively developing my skills in software development and art.
-                             This page will feature my technical and creative projects, and highlight the ways in which I’ve brought these interests together.
+                            Hi! I'm a recently graduated CS student from the University of British Columbia, where I studied from 2020 - 2026. 
+                           I’m currently a 4th-year Computer Science student at the University of British Columbia. I enjoy problem solving and
+                           creating and am currently focusing on developing my skills in software development and art. I developed this page 
+                           as a representation of me, and as such, it holds my technical and creative projects, and the ways in which I've brought these interests together.
                         `}
                     </Paragraph>
                     <br /> <br />
@@ -137,10 +138,11 @@ const AboutMe: React.FC<{}> = () => {
                     <Paragraph>
                     {/* {` */}
                         As part of UBC’c coop program, I’ve had the opportunity to gain valuable hand-on 
-                        experience in two placements. One as a <span style={{  color: 'white' }}>Junior QA Engineer</span> at Trulioo, where I
+                        experience in three placements. One as a <span style={{  color: 'white' }}>Junior QA Engineer</span> at Trulioo, where I
                         focused on implementing automated end-to-end tests for the full-stack application.
                         The second as a <span style={{  color: 'white' }}>Software Engineer</span> at Routific, where my focus shifted to developing
-                        new features and building reusable web components for a full-stack application.
+                        new features and building reusable web components for a full-stack application. And lastly, as 
+                        a <span style={{  color: 'white' }}>Software Engineer</span> at LocalIntel, where I developed and maintained Python-based pipelines in Databricks for a data driven web application.
                     {/* `} */}
                     </Paragraph>
                     <br /> <br />

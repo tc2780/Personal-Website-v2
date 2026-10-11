@@ -104,6 +104,19 @@ const ArchivedDescription = styled.div`
 const ProjectArchive: React.FC<{}> = () => {
       const data = [
         {
+            title: `Creative Portfolio`,
+            imgSrc: './images/creativePortfolio.png',
+            description: 'Jul - Aug 2026',
+            content: 'An interactive creative portfolio featuring my creative works and 3D studies. Created with React, shadcn, Magic UI, AntD and hosted on Vercel.',
+            actions: [<a href="https://github.com/tc2780/creative-portfolio" target="_blank" key="github">
+                            <GithubFilled style={{fontSize: "20px"}}/>
+                        </a>,
+                        <a href="https://creative-portfolio-tc2780.vercel.app/" target="_blank" key="site">
+                            <LinkOutlined style={{fontSize: "20px"}}/>
+                        </a>
+            ]
+        },
+        {
             title: `Analyzing Steam Games`,
             imgSrc: './images/analyzingSteamGames.png',
             description: 'Jan - April 2025',

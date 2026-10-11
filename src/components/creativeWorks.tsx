@@ -121,7 +121,7 @@ const CreativeWorks: React.FC<{}> = () => {
                                         <Image src="./images/catHeader.png" alt="catHeader"/>
                                         <ImageListItemBar position="below" 
                                             title={"just a cat"} 
-                                            subtitle={"used as the header for this site!"} />
+                                            subtitle={"used as the header for this site"} />
                                     </ImageListItem>
 
                                     <ImageListItem key={"shark"}>

@@ -1,6 +1,6 @@
 'use client'
-import { GithubFilled, LinkedinFilled } from "@ant-design/icons";
-import { Affix, Anchor, Button, ConfigProvider } from "antd";
+import { GithubFilled, HighlightFilled, HighlightOutlined, LinkedinFilled } from "@ant-design/icons";
+import { Affix, Anchor, Button, ConfigProvider, Tooltip } from "antd";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import styled from 'styled-components';
 
@@ -28,8 +28,10 @@ const StyledAnchor = styled(Anchor)`
     .ant-anchor-link-title .ant-anchor{
         color: white;
     }
+    .ant-anchor-link-title:hover {
+        color: #a74cf1;
+    }
 `;
-
 
 const NavBar: React.FC<{}> = () => {
     const [atTop, setAtTop] = useState(true);
@@ -97,21 +99,34 @@ const NavBar: React.FC<{}> = () => {
                         // offsetTop={100}
                         targetOffset={100}
                 />
-                <div>
-                    <Button 
-                        ghost 
-                        style={{border: "none"}}
-                        href="https://www.linkedin.com/in/tracy-chow-6bab40189/"
-                        target="_blank"
-                        icon={<LinkedinFilled style={{fontSize: "25px", paddingRight: "20px"}} />}
-                    />
-                    <Button 
-                        ghost 
-                        style={{border: "none"}}
-                        href="https://github.com/tc2780"
-                        target="_blank"
-                        icon={<GithubFilled style={{fontSize: "25px"}} />}
-                    />
+                <div style={{display: "flex", flexDirection: "row", gap: "14px"}}>
+                    <Tooltip title="Creative Portfolio" styles={{body: {fontSize: '16px', opacity: '80%'}}}>
+                        <Button 
+                            ghost 
+                            style={{border: "none"}}
+                            href="https://www.linkedin.com/in/tracy-chow-6bab40189/"
+                            target="_blank"
+                            icon={<HighlightFilled style={{fontSize: "25px",}} />}
+                        />
+                    </Tooltip>
+                    <Tooltip title="LinkedIn" styles={{body: {fontSize: '16px', opacity: '80%'}}}>
+                        <Button 
+                            ghost 
+                            style={{border: "none"}}
+                            href="https://www.linkedin.com/in/tracy-chow-6bab40189/"
+                            target="_blank"
+                            icon={<LinkedinFilled style={{fontSize: "25px"}} />}
+                        />
+                    </Tooltip>
+                    <Tooltip title="GitHub" styles={{body: {fontSize: '16px', opacity: '80%'}}}>
+                        <Button 
+                            ghost 
+                            style={{border: "none"}}
+                            href="https://github.com/tc2780"
+                            target="_blank"
+                            icon={<GithubFilled style={{fontSize: "25px"}} />}
+                        />
+                    </Tooltip>
                 </div>
             </StyledNav>
         </ConfigProvider>
