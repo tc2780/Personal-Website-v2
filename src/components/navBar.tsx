@@ -104,7 +104,7 @@ const NavBar: React.FC<{}> = () => {
                         <Button 
                             ghost 
                             style={{border: "none"}}
-                            href="https://www.linkedin.com/in/tracy-chow-6bab40189/"
+                            href="https://creative-portfolio-tc2780.vercel.app/"
                             target="_blank"
                             icon={<HighlightFilled style={{fontSize: "25px",}} />}
                         />
