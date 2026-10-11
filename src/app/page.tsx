@@ -85,7 +85,7 @@ export default function Home() {
         `}
         <br />
           {`
-            Copyright © 2024-2025 Tracy Chow
+            Copyright © 2024-2026 Tracy Chow
           `}
           <br />
           <Button 
